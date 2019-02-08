@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on How to use Arktoon-Shaders</title>
-    <link>https://synqark.github.io/Arktoon-Manual/posts/</link>
+    <link>https://synqark.github.io/Arktoon-Shaders-Doc/posts/</link>
     <description>Recent content in Posts on How to use Arktoon-Shaders</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <lastBuildDate>Fri, 08 Feb 2019 00:25:08 +0900</lastBuildDate>
     
-	<atom:link href="https://synqark.github.io/Arktoon-Manual/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://synqark.github.io/Arktoon-Shaders-Doc/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>どうやるん？</title>
-      <link>https://synqark.github.io/Arktoon-Manual/posts/my-first-post/</link>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/posts/my-first-post/</link>
       <pubDate>Fri, 08 Feb 2019 00:25:08 +0900</pubDate>
       
-      <guid>https://synqark.github.io/Arktoon-Manual/posts/my-first-post/</guid>
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/posts/my-first-post/</guid>
       <description></description>
     </item>
     
