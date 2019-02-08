@@ -29,6 +29,7 @@ jobs:
           command: |
               hugo
               cp -rp public/* docs/
-              git add .
+              cd docs
+              git add --all
               git commit -m "[ci skip] publish"
               git push origin master
