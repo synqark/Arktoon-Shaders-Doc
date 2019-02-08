@@ -35,4 +35,5 @@ jobs:
               cp -rp public/* docs/
               git add .
               git commit -m "[ci skip] publish"
+              git remote add origin git@github.com:synqark/Arktoon-Shaders.git
               git push origin master
