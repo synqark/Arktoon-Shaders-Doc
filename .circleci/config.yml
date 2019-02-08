@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       # specify the version
-      - image: circleci/golang:1.9
+      - image: circleci/golang
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -20,7 +20,7 @@ jobs:
       - run:
           name: hugo install
           command: |
-              go get -v github.com/spf13/hugo
+              go get -v github.com/gohugoio/hugo
               git config --global user.name "synqark"
               git config --global user.email "virtually.synqarks@gmail.com"
 
