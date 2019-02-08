@@ -35,4 +35,4 @@ jobs:
               cp -rp public/* docs/
               git add .
               git commit -m "[ci skip] publish"
-              git push -q https://0893db2490dd324f50f4f33e35387d30ae67656d@github.com:synqark/Arktoon-Shaders.git master
+              git push -q https://0893db2490dd324f50f4f33e35387d30ae67656d@github.com/synqark/Arktoon-Shaders-Doc.git master
