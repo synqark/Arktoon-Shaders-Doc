@@ -17,10 +17,6 @@ jobs:
     working_directory: /go/src/github.com/{{ORG_NAME}}/{{REPO_NAME}}
     steps:
       - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - "2d:f2:b4:d7:c2:6c:2f:8c:0c:cb:a5:14:3f:17:ff:49"
-
       - run:
           name: hugo install
           command: |
