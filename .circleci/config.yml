@@ -19,7 +19,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "ae:9c:85:21:4c:ab:27:fb:02:e1:19:9c:d0:a6:fd:5e"
+            - "2d:f2:b4:d7:c2:6c:2f:8c:0c:cb:a5:14:3f:17:ff:49"
 
       - run:
           name: hugo install
@@ -35,4 +35,4 @@ jobs:
               cp -rp public/* docs/
               git add .
               git commit -m "[ci skip] publish"
-              git push -q https://0893db2490dd324f50f4f33e35387d30ae67656d@github.com/synqark/Arktoon-Shaders-Doc.git master
+              git push origin master
