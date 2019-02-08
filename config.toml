@@ -1,4 +1,4 @@
-baseURL = "https://synqark.github.io/Arktoon-Manual/"
+baseURL = "https://synqark.github.io/Arktoon-Shaders-Doc/"
 languageCode = "ja-JP"
 title = "How to use Arktoon-Shaders"
 theme = "hugo-theme-learn"
