@@ -29,6 +29,7 @@ jobs:
           command: |
               hugo
               cp -rp public/* docs/
+              rm -rf public
               cd docs
               git add --all
               git commit -m "[ci skip] publish"
