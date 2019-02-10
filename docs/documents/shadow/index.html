@@ -13,19 +13,19 @@
 
     
     <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/nucleus.css?1549808195" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/fontawesome-all.min.css?1549808195" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/hybrid.css?1549808195" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/featherlight.min.css?1549808195" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/perfect-scrollbar.min.css?1549808195" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/auto-complete.css?1549808195" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/theme.css?1549808195" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/hugo-theme.css?1549808195" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/nucleus.css?1549818632" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/fontawesome-all.min.css?1549818632" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/hybrid.css?1549818632" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/featherlight.min.css?1549818632" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/perfect-scrollbar.min.css?1549818632" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/auto-complete.css?1549818632" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/theme.css?1549818632" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/hugo-theme.css?1549818632" rel="stylesheet">
     
-      <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/theme-blue.css?1549808195" rel="stylesheet">
+      <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/theme-blue.css?1549818632" rel="stylesheet">
     
 
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/jquery-2.x.min.js?1549808195"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/jquery-2.x.min.js?1549818632"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -474,12 +474,13 @@
 <li><a href="#できること">できること</a></li>
 <li><a href="#各項目について">各項目について</a>
 <ul>
-<li><a href="#border-pos">Border pos</a></li>
-<li><a href="#border-blur-border-blur-mask">Border blur / Border blur Mask</a></li>
+<li><a href="#border">Border</a></li>
 <li><a href="#strength-strength-mask">Strength / Strength Mask</a></li>
-<li><a href="#use-steps">Use Steps</a></li>
+<li><a href="#blur-blur-mask">Blur / Blur Mask</a></li>
+<li><a href="#use-steps-steps">Use Steps / Steps</a></li>
 <li><a href="#use-custom-shade">Use Custom Shade</a></li>
-<li><a href="#mix-default-shadow">Mix Default Shadow</a></li>
+<li><a href="#mix-default-shade">Mix Default Shade</a></li>
+<li><a href="#1st-shade">1st shade</a></li>
 <li><a href="#use-shade-texture-shade-texture">Use Shade Texture → Shade Texture</a></li>
 <li><a href="#hue-shift-saturation-value">Hue Shift / Saturation / Value</a></li>
 <li><a href="#2nd-shade-実験中の機能">2nd shade (実験中の機能）</a></li>
@@ -511,18 +512,16 @@
 
 <p>マテリアルの陰に関する調整ができます。<br />
 陰の強さだけではなく、陰の諧調、また陰にかかったテクスチャの色などを指定できます。<br />
-また、実験中の機能として陰色を２つ指定できる「2nd shade」機能を搭載しています。</p>
+<figure>
+    <img src="https://synqark.github.io/Arktoon-Shaders-Doc/images/cat_shadow1.gif"/> 
+</figure>
+</p>
 
 <h3 id="各項目について">各項目について</h3>
 
-<h4 id="border-pos">Border pos</h4>
+<h4 id="border">Border</h4>
 
 <p>影の境目となる地点を指定できます。</p>
-
-<h4 id="border-blur-border-blur-mask">Border blur / Border blur Mask</h4>
-
-<p>影の境目をどの程度グラデーションさせるかを指定します。0で境目がくっきりします。<br />
-Border blur Maskを使うことで、下記の画像のように同一メッシュ内でも陰影の間隔を設定できます。</p>
 
 <h4 id="strength-strength-mask">Strength / Strength Mask</h4>
 
@@ -532,31 +531,52 @@ Border blur Maskを使うことで、下記の画像のように同一メッシ�
 　「顔を除いて全体に陰を付けたい」などの場合は、顔だけを黒く、それ以外を白く塗りつぶしたテクスチャを設定して実現できます。<br />
 　※Custom Shadeを使用中は設定ができません。</p>
 
-<h4 id="use-steps">Use Steps</h4>
+<h4 id="blur-blur-mask">Blur / Blur Mask</h4>
+
+<p>影の境目をどの程度グラデーションさせるかを指定します。0で境目がくっきりします。<br />
+Border blur Maskを使うことで、下記の画像のように同一メッシュ内でも陰影の間隔を設定できます。</p>
+
+<h4 id="use-steps-steps">Use Steps / Steps</h4>
 
 <p>　Shadow borderで指定した陰のグラデーションをポスタライズ（n諧調化）する場合にチェックします。<br />
 スライダーで指定した数字（小数点は切り捨て）分に色が切り分けられます。</p>
 
 <h4 id="use-custom-shade">Use Custom Shade</h4>
 
-<p>陰の部分をシェーダーに任せずに、独自で色またはテクスチャを指定したい場合にチェックします。</p>
+<p>陰の部分をシェーダーに任せずに、独自で色またはテクスチャを指定したい場合にチェックします。
+<figure>
+    <img src="https://synqark.github.io/Arktoon-Shaders-Doc/images/cat_shadow2.gif"/> 
+</figure>
+</p>
 
-<h4 id="mix-default-shadow">Mix Default Shadow</h4>
+<h4 id="mix-default-shade">Mix Default Shade</h4>
 
 <p>下記で設定した色に対して、シェーダーが決めた「本来の陰の色」の合成割合を指定します</p>
+
+<h4 id="1st-shade">1st shade</h4>
+
+<p>以降のオプションは、1つ目の陰に対して適用されます。</p>
 
 <h4 id="use-shade-texture-shade-texture">Use Shade Texture → Shade Texture</h4>
 
 <p>陰にあたる部分をテクスチャを使って表現したい場合、設定します。<br />
-　　（より良いサンプル動画募集してます..）</p>
+（より良いサンプル動画募集してます..）
+<figure>
+    <img src="https://synqark.github.io/Arktoon-Shaders-Doc/images/cat_shadow3.jpg"/> 
+</figure>
+</p>
 
 <h4 id="hue-shift-saturation-value">Hue Shift / Saturation / Value</h4>
 
-<p>陰にあたる部分を「色相/彩度/明度」を変更して設定する場合は、Shade Textureにチェックを入れずにスライダーで設定します。</p>
+<p>陰にあたる部分を「色相/彩度/明度」を変更して設定する場合は、Shade Textureにチェックを入れずにスライダーで設定します。
+<figure>
+    <img src="https://synqark.github.io/Arktoon-Shaders-Doc/images/cat_shadow4.jpg"/> 
+</figure>
+</p>
 
 <h4 id="2nd-shade-実験中の機能">2nd shade (実験中の機能）</h4>
 
-<p>より暗い陰の部分に関して指定する色を同様に設定できます</p>
+<p>チェックすると、1つ目の陰と同様のオプションが表示されます。</p>
 
 
 <footer class=" footline" >
@@ -895,20 +915,20 @@ Border blur Maskを使うことで、下記の画像のように同一メッシ�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/clipboard.min.js?1549808195"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.min.js?1549808195"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.jquery.min.js?1549808195"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/jquery.sticky.js?1549808195"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/featherlight.min.js?1549808195"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/html5shiv-printshiv.min.js?1549808195"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/highlight.pack.js?1549808195"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/clipboard.min.js?1549818632"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.min.js?1549818632"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.jquery.min.js?1549818632"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/jquery.sticky.js?1549818632"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/featherlight.min.js?1549818632"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/html5shiv-printshiv.min.js?1549818632"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/highlight.pack.js?1549818632"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/modernizr.custom.71422.js?1549808195"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/learn.js?1549808195"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/hugo-learn.js?1549808195"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/modernizr.custom.71422.js?1549818632"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/learn.js?1549818632"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/hugo-learn.js?1549818632"></script>
 
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.css?1549808195" type="text/css" rel="stylesheet" />
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.js?1549808195"></script>
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.css?1549818632" type="text/css" rel="stylesheet" />
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.js?1549818632"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
