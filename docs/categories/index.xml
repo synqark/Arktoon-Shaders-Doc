@@ -237,21 +237,20 @@ Hue Shift / Saturation / Value 陰にあたる部分を「色相/彩度/明度�
       <pubDate>Sun, 10 Feb 2019 17:18:04 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/varieties/</guid>
-      <description>arktoon/Opaque 不透明なマテリアルの場合、こちらを設定してください。
+      <description> arktoon/Opaque 不透明なマテリアルの場合、こちらを設定してください。
 (オ(ｩ)ペークと読むらしいです）
-arktoon/AlphaCutout 不透明と透明が明白に分かれている物体を表現する場合、こちらを指定してください。
+  arktoon/AlphaCutout 不透明と透明が明白に分かれている物体を表現する場合、こちらを指定してください。
 Main Textureの透明度でカットアウト（切り抜き）が行われます。
 影も切り抜いた形状で投写されます。
-arktoon/Fade 物体に半透明を含む場合、こちらを指定してください。
+  arktoon/Fade 物体に半透明を含む場合、こちらを指定してください。
 落とす影も透明度に応じてディザリング処理されます。
-arktoon/FadeRefracted 物体に半透明を含み、かつ奥の映像を屈折させたい場合、こちらを指定してください。
-（パスが1個増えるため、屈折が不要であればFadeを使ってください）
-arktoon/Stencil/Writer(またはReader)/Cutout 描画と同時に、ステンシルバッファの書き込み（Writer）、
+  arktoon/FadeRefracted 物体に半透明を含み、かつ奥の映像を屈折させたい場合、こちらを指定してください。
+（パスが1個増えて多少負荷が増えるため、屈折が不要であればFadeを使ってください）
+  arktoon/Stencil/Writer(またはReader)/Cutout 描画と同時に、ステンシルバッファの書き込み（Writer）、
 および読み込んで比較して表示制御（Reader）を実施します。
 それ以外の機能はCutoutと同等です。
-arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。
-arktoon/Stencil/Reader/Fade 上記「arktoon/Stencil/Reader/Cutout」のFadeバリエーションになっています。
-arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。</description>
+  arktoon/Stencil/Reader/Fade 上記「arktoon/Stencil/Reader/Cutout」のFadeバリエーションになっています。
+arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。   arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。   </description>
     </item>
     
     <item>
@@ -260,21 +259,20 @@ arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画し
       <pubDate>Sun, 10 Feb 2019 17:18:04 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/varieties/</guid>
-      <description>arktoon/Opaque 不透明なマテリアルの場合、こちらを設定してください。
+      <description> arktoon/Opaque 不透明なマテリアルの場合、こちらを設定してください。
 (オ(ｩ)ペークと読むらしいです）
-arktoon/AlphaCutout 不透明と透明が明白に分かれている物体を表現する場合、こちらを指定してください。
+  arktoon/AlphaCutout 不透明と透明が明白に分かれている物体を表現する場合、こちらを指定してください。
 Main Textureの透明度でカットアウト（切り抜き）が行われます。
 影も切り抜いた形状で投写されます。
-arktoon/Fade 物体に半透明を含む場合、こちらを指定してください。
+  arktoon/Fade 物体に半透明を含む場合、こちらを指定してください。
 落とす影も透明度に応じてディザリング処理されます。
-arktoon/FadeRefracted 物体に半透明を含み、かつ奥の映像を屈折させたい場合、こちらを指定してください。
-（パスが1個増えるため、屈折が不要であればFadeを使ってください）
-arktoon/Stencil/Writer(またはReader)/Cutout 描画と同時に、ステンシルバッファの書き込み（Writer）、
+  arktoon/FadeRefracted 物体に半透明を含み、かつ奥の映像を屈折させたい場合、こちらを指定してください。
+（パスが1個増えて多少負荷が増えるため、屈折が不要であればFadeを使ってください）
+  arktoon/Stencil/Writer(またはReader)/Cutout 描画と同時に、ステンシルバッファの書き込み（Writer）、
 および読み込んで比較して表示制御（Reader）を実施します。
 それ以外の機能はCutoutと同等です。
-arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。
-arktoon/Stencil/Reader/Fade 上記「arktoon/Stencil/Reader/Cutout」のFadeバリエーションになっています。
-arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。</description>
+  arktoon/Stencil/Reader/Fade 上記「arktoon/Stencil/Reader/Cutout」のFadeバリエーションになっています。
+arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。   arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。   </description>
     </item>
     
     <item>
@@ -309,7 +307,12 @@ Color 反射する光の色に影響します。</description>
       <pubDate>Sun, 10 Feb 2019 17:18:45 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/</guid>
-      <description>実際にシェーダーの各カテゴリについて解説します。 左のメニューより確認したいカテゴリを選択してください。</description>
+      <description> 実際にシェーダーの各カテゴリについて解説します。
+左のメニューより確認したいカテゴリを選択してください。
+説明に使うモデルについて 全編通して、販売3Dモデルである量産型のらきゃっとを使用して説明いたします。
+量産型のらきゃっと は、バーチャル美少女のらきゃっと(のらきゃっとチャンネル) から
+公開・販売されている、文字通りのらきゃっとちゃんのマスプロダクションモデルです。
+  </description>
     </item>
     
     <item>
@@ -318,7 +321,12 @@ Color 反射する光の色に影響します。</description>
       <pubDate>Sun, 10 Feb 2019 17:18:45 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/</guid>
-      <description>実際にシェーダーの各カテゴリについて解説します。 左のメニューより確認したいカテゴリを選択してください。</description>
+      <description> 実際にシェーダーの各カテゴリについて解説します。
+左のメニューより確認したいカテゴリを選択してください。
+説明に使うモデルについて 全編通して、販売3Dモデルである量産型のらきゃっとを使用して説明いたします。
+量産型のらきゃっと は、バーチャル美少女のらきゃっと(のらきゃっとチャンネル) から
+公開・販売されている、文字通りのらきゃっとちゃんのマスプロダクションモデルです。
+  </description>
     </item>
     
     <item>
