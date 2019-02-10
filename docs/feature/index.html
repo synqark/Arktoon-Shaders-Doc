@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
-    <title>Arktoon-Shaders. Docs :: How to use Arktoon-Shaders</title>
+    <title>Arktoon-Shaders のとくちょう :: How to use Arktoon-Shaders</title>
 
     
     <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/feature/">
     <nav id="sidebar" class="">
 
 
@@ -59,8 +59,8 @@
   
     
     <li data-nav-id="/feature/" title="Arktoon-Shaders のとくちょう" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://synqark.github.io/Arktoon-Shaders-Doc/feature/">
@@ -206,28 +206,113 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > Arktoon-Shaders のとくちょう
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#forwardrenderingの全てのライトをサポート-vrchatの鏡含む">ForwardRenderingの全てのライトをサポート （VRChatの鏡含む）</a></li>
+<li><a href="#豊富なカスタマイズ要素">豊富なカスタマイズ要素</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>Arktoon-Shaders のとくちょう</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="arktoon-shaders-のつかいかた">Arktoon-Shaders. のつかいかた</h1>
 
-<p>当サイトは、公開中の Arktoon-Shaders (<a href="https://github.com/synqark/Arktoon-Shaders">GitHub</a>)(<a href="https://packetbird.booth.pm/items/1027997">BOOTH</a>) のマニュアルになります。
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">HTMLやろうと思ったけどHugoが思いのほか今回の用途にマッチしていてまずい</p>&mdash; synqark (@synqark) <a href="https://twitter.com/synqark/status/1093536161828487168?ref_src=twsrc%5Etfw">February 7, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</p>
+<h2 id="forwardrenderingの全てのライトをサポート-vrchatの鏡含む">ForwardRenderingの全てのライトをサポート （VRChatの鏡含む）</h2>
+
+<p>Forward Lightingにおける下記のライト要素をサポートします</p>
+
+<ul>
+<li>Directional Light<br />
+主に太陽光を表現する、平行光源です<br /></li>
+<li>Realtime Spot/Point Light （PixelLight, VertexLight, SH）<br />
+スポットライトや、電球などを表現するライトです<br />
+これらはいくつかパターンがありますが、全てのバリエーションで対応しています。<br /></li>
+<li>LightProbe(SH)<br />
+ライトプローブに対応しています。<br />
+これらの要素全てに対応した自作シェーダーは意外と少なく（特にVertexLight）<br />
+例えばVRChatでは鏡の反対側の映りが悪くなるシェーダーがいくつかありますが、<br />
+本シェーダーでは全て対応しており、シーンの空気感を損ねる事無く、一貫性のある表現が可能です。<br /></li>
+</ul>
+
+<h2 id="豊富なカスタマイズ要素">豊富なカスタマイズ要素</h2>
+
+<p>以下の要素をサポートします</p>
+
+<ul>
+<li>影のかかりかたを調整可能（薄く広く、またはきっちりとしたセル画風にも）<br /></li>
+<li>陰色テクスチャの使用・またはHSV（色相・彩度・明度）シフトによる陰色設定<br /></li>
+<li>ライトに対応するグロス（艶）<br /></li>
+<li>アウトライン<br /></li>
+<li>MatCap （比較(明) / 加算 / スクリーン合成）<br /></li>
+<li>リフレクション　（リフレクションプローブ / 持ち込みキューブマップ対応）<br /></li>
+<li>リムライト（モデルのふちが光る奴）<br /></li>
+<li>ShadeCap（比較(暗) / 乗算合成 / ライトマスク）（MatCapの逆）<br /></li>
+<li>ステンシル（半透明ステンシルを実現するいくつかの手段を含む）<br /></li>
+<li>頂点カラー<br /></li>
+<li>視差エミッションテクスチャ<br /></li>
+<li>その他細かい設定<br />
+　（ポイントライトの陰の強さ、Cubedスタイルの光源サンプリング、などなど）<br /></li>
+</ul>
+
+<p>これらのほとんどは適用度を設定でき、また、メッシュの一部に適用するためのマスクテクスチャをサポートしています。<br />
+各機能の細かい説明は次項より記載しております。</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -259,8 +344,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -277,6 +360,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -362,8 +448,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/" title="Arktoon-Shaders. Docs"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/feature/" title="Arktoon-Shaders のとくちょう" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/start/" title="とりあえず使う" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -373,20 +461,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/clipboard.min.js?1549789173"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.min.js?1549789173"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.jquery.min.js?1549789173"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/jquery.sticky.js?1549789173"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/featherlight.min.js?1549789173"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/html5shiv-printshiv.min.js?1549789173"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/highlight.pack.js?1549789173"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/clipboard.min.js?1549789172"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.min.js?1549789172"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.jquery.min.js?1549789172"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/jquery.sticky.js?1549789172"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/featherlight.min.js?1549789172"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/html5shiv-printshiv.min.js?1549789172"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/highlight.pack.js?1549789172"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/modernizr.custom.71422.js?1549789173"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/learn.js?1549789173"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/hugo-learn.js?1549789173"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/modernizr.custom.71422.js?1549789172"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/learn.js?1549789172"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/hugo-learn.js?1549789172"></script>
 
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.css?1549789173" type="text/css" rel="stylesheet" />
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.js?1549789173"></script>
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.css?1549789172" type="text/css" rel="stylesheet" />
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.js?1549789172"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -394,4 +482,3 @@
 
   </body>
 </html>
-
