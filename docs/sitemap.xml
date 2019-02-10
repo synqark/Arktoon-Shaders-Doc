@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/common/</loc>
+    <lastmod>2019-02-10T21:10:57+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://synqark.github.io/Arktoon-Shaders-Doc/feature/</loc>
     <lastmod>2019-02-10T14:27:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/alphamask_alphacutout/</loc>
+    <lastmod>2019-02-10T21:16:21+09:00</lastmod>
   </url>
   
   <url>
@@ -13,8 +23,18 @@
   </url>
   
   <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/shadow/</loc>
+    <lastmod>2019-02-10T21:19:37+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://synqark.github.io/Arktoon-Shaders-Doc/varieties/</loc>
     <lastmod>2019-02-10T17:18:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/gloss/</loc>
+    <lastmod>2019-02-10T21:23:17+09:00</lastmod>
   </url>
   
   <url>
@@ -23,13 +43,48 @@
   </url>
   
   <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/outline/</loc>
+    <lastmod>2019-02-10T21:25:08+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://synqark.github.io/Arktoon-Shaders-Doc/samples/</loc>
     <lastmod>2019-02-10T17:24:25+09:00</lastmod>
   </url>
   
   <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/matcap/</loc>
+    <lastmod>2019-02-10T21:26:05+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://synqark.github.io/Arktoon-Shaders-Doc/help/</loc>
     <lastmod>2019-02-10T17:25:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/reflection/</loc>
+    <lastmod>2019-02-10T21:27:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/rim/</loc>
+    <lastmod>2019-02-10T21:28:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/shadecap/</loc>
+    <lastmod>2019-02-10T21:29:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/parallaxed/</loc>
+    <lastmod>2019-02-10T21:30:06+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://synqark.github.io/Arktoon-Shaders-Doc/documents/advanced/</loc>
+    <lastmod>2019-02-10T21:30:57+09:00</lastmod>
   </url>
   
   <url>
@@ -39,25 +94,25 @@
   
   <url>
     <loc>https://synqark.github.io/Arktoon-Shaders-Doc/tags/</loc>
-    <lastmod>2019-02-10T14:27:13+09:00</lastmod>
+    <lastmod>2019-02-10T21:10:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://synqark.github.io/Arktoon-Shaders-Doc/categories/</loc>
-    <lastmod>2019-02-10T14:27:13+09:00</lastmod>
+    <lastmod>2019-02-10T21:10:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://synqark.github.io/Arktoon-Shaders-Doc/categories/</loc>
-    <lastmod>2019-02-10T14:27:13+09:00</lastmod>
+    <lastmod>2019-02-10T21:10:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://synqark.github.io/Arktoon-Shaders-Doc/tags/</loc>
-    <lastmod>2019-02-10T14:27:13+09:00</lastmod>
+    <lastmod>2019-02-10T21:10:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   

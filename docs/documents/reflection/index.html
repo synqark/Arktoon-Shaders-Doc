@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.55.0-DEV" />
-    <meta name="description" content="困った？それとも別の用件？">
+    <meta name="description" content="">
 
 
     <link rel="shortcut icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
-    <title>お問い合わせ :: How to use Arktoon-Shaders</title>
+    <title>Reflection :: How to use Arktoon-Shaders</title>
 
     
     <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/help/">
+  <body class="" data-url="/documents/reflection/">
     <nav id="sidebar" class="">
 
 
@@ -125,7 +125,7 @@
   
     
     <li data-nav-id="/documents/" title="各カテゴリの機能について" class="dd-item 
-        
+        parent
         
         
         ">
@@ -263,7 +263,7 @@
  
   
     
-      <li data-nav-id="/documents/reflection/" title="Reflection" class="dd-item ">
+      <li data-nav-id="/documents/reflection/" title="Reflection" class="dd-item active">
         <a href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/reflection/">
         Reflection
         
@@ -388,8 +388,8 @@
   
     
     <li data-nav-id="/help/" title="お問い合わせ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://synqark.github.io/Arktoon-Shaders-Doc/help/">
@@ -448,7 +448,13 @@
             
           
           
-            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > お問い合わせ
+            
+            
+          
+          
+            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > <a href='https://synqark.github.io/Arktoon-Shaders-Doc/documents/'>各カテゴリの機能について</a> > Reflection
+          
+        
           
         
           
@@ -465,9 +471,16 @@
 <ul>
 <li>
 <ul>
-<li><a href="#discordサーバーがあります">Discordサーバーがあります。</a></li>
-<li><a href="#twitterでも随時受け付けてます">Twitterでも随時受け付けてます</a></li>
-<li><a href="#直接コンタクトしたい">直接コンタクトしたい</a></li>
+<li><a href="#できること">できること</a></li>
+<li><a href="#各項目について">各項目について</a>
+<ul>
+<li><a href="#use-reflection-probe">Use Reflection Probe</a></li>
+<li><a href="#smoothness-smoothness-mask">Smoothness / Smoothness Mask</a></li>
+<li><a href="#normal-map-mix">Normal Map mix</a></li>
+<li><a href="#shadow-mix">Shadow mix</a></li>
+<li><a href="#suppress-base-color">Suppress Base Color</a></li>
+<li><a href="#cubemap-fallback">Cubemap（Fallback）</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -483,7 +496,7 @@
         
         <div id="body-inner">
           
-            <h1>お問い合わせ</h1>
+            <h1>Reflection</h1>
           
 
         
@@ -491,25 +504,44 @@
 
 
 
-<p>困った？それとも別の用件？</p>
+<h3 id="できること">できること</h3>
 
-<h3 id="discordサーバーがあります">Discordサーバーがあります。</h3>
+<p>メッシュに対して鏡面反射を設定します。</p>
 
-<p><a href="https://discord.gg/ZeqMBut" target="_blank">相談用のDiscordサーバー</a>を建てました。こちらからご参加ください。</p>
+<h3 id="各項目について">各項目について</h3>
 
-<h3 id="twitterでも随時受け付けてます">Twitterでも随時受け付けてます</h3>
+<h4 id="use-reflection-probe">Use Reflection Probe</h4>
 
-<p><a href="https://www.twitter.com/synqark/" target="_blank">@synqark</a> 当てにリプライとかDMを飛ばしていただければ対応できるかも？</p>
+<p>シーン中のReflection Probeを使用する場合はチェックします。
+チェック無し、またはチェックがあってもシーンに存在しない場合はCubemapが使用されます。</p>
 
-<h3 id="直接コンタクトしたい">直接コンタクトしたい</h3>
+<h4 id="smoothness-smoothness-mask">Smoothness / Smoothness Mask</h4>
 
-<p>シェーダーでの表現方法に関する質問であれば、後から他の人が追えるようにできるだけオープンな場でお願いしたいです。<br />
-アバターへの同梱方法や、使用可否の確認など、表現以外の話であれば、TwitterのDMを使うか、 <code>virtually.synqarks@gmail.com</code> まで連絡下さい。</p>
+<p>面の「つやつや度」を設定します。高いほど光が集まり、強く反射します。
+Maskを指定することでメッシュの部分部分で設定が可能です。</p>
+
+<h4 id="normal-map-mix">Normal Map mix</h4>
+
+<p>Reflectionを着色する際にNormal mapをどの程度考慮するかをスライダーで指定します。</p>
+
+<h4 id="shadow-mix">Shadow mix</h4>
+
+<p>陰影部分にどの程度Reflectionを適用”しない”かをスライダーで指定します。</p>
+
+<h4 id="suppress-base-color">Suppress Base Color</h4>
+
+<p>Reflectionの着色に応じてメッシュ本来の色（≒ Main Color）をどの程度「抑える」かをスライダーで設定します。</p>
+
+<h4 id="cubemap-fallback">Cubemap（Fallback）</h4>
+
+<p>反射もととなるCubemapテクスチャを設定します。
+Use Reflection Probeがオンの場合は、シーンに存在しない場合に自動的に設定されます。</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -593,6 +625,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -605,6 +638,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -702,6 +738,26 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -761,22 +817,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -800,7 +840,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -822,10 +861,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/samples/" title="シェーダー作例(WIP)"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/matcap/" title="Matcap"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/feature/" title="Arktoon-Shaders のとくちょう" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/rim/" title="Rim" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -856,3 +895,4 @@
 
   </body>
 </html>
+

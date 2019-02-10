@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.55.0-DEV" />
-    <meta name="description" content="困った？それとも別の用件？">
+    <meta name="description" content="">
 
 
     <link rel="shortcut icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
-    <title>お問い合わせ :: How to use Arktoon-Shaders</title>
+    <title>Shadow :: How to use Arktoon-Shaders</title>
 
     
     <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/help/">
+  <body class="" data-url="/documents/shadow/">
     <nav id="sidebar" class="">
 
 
@@ -125,7 +125,7 @@
   
     
     <li data-nav-id="/documents/" title="各カテゴリの機能について" class="dd-item 
-        
+        parent
         
         
         ">
@@ -187,7 +187,7 @@
  
   
     
-      <li data-nav-id="/documents/shadow/" title="Shadow" class="dd-item ">
+      <li data-nav-id="/documents/shadow/" title="Shadow" class="dd-item active">
         <a href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/shadow/">
         Shadow
         
@@ -388,8 +388,8 @@
   
     
     <li data-nav-id="/help/" title="お問い合わせ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://synqark.github.io/Arktoon-Shaders-Doc/help/">
@@ -448,7 +448,13 @@
             
           
           
-            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > お問い合わせ
+            
+            
+          
+          
+            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > <a href='https://synqark.github.io/Arktoon-Shaders-Doc/documents/'>各カテゴリの機能について</a> > Shadow
+          
+        
           
         
           
@@ -465,9 +471,19 @@
 <ul>
 <li>
 <ul>
-<li><a href="#discordサーバーがあります">Discordサーバーがあります。</a></li>
-<li><a href="#twitterでも随時受け付けてます">Twitterでも随時受け付けてます</a></li>
-<li><a href="#直接コンタクトしたい">直接コンタクトしたい</a></li>
+<li><a href="#できること">できること</a></li>
+<li><a href="#各項目について">各項目について</a>
+<ul>
+<li><a href="#border-pos">Border pos</a></li>
+<li><a href="#border-blur-border-blur-mask">Border blur / Border blur Mask</a></li>
+<li><a href="#strength-strength-mask">Strength / Strength Mask</a></li>
+<li><a href="#use-steps">Use Steps</a></li>
+<li><a href="#use-custom-shade">Use Custom Shade</a></li>
+<li><a href="#mix-default-shadow">Mix Default Shadow</a></li>
+<li><a href="#use-shade-texture-shade-texture">Use Shade Texture → Shade Texture</a></li>
+<li><a href="#hue-shift-saturation-value">Hue Shift / Saturation / Value</a></li>
+<li><a href="#2nd-shade-実験中の機能">2nd shade (実験中の機能）</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -483,7 +499,7 @@
         
         <div id="body-inner">
           
-            <h1>お問い合わせ</h1>
+            <h1>Shadow</h1>
           
 
         
@@ -491,25 +507,62 @@
 
 
 
-<p>困った？それとも別の用件？</p>
+<h3 id="できること">できること</h3>
 
-<h3 id="discordサーバーがあります">Discordサーバーがあります。</h3>
+<p>マテリアルの陰に関する調整ができます。<br />
+陰の強さだけではなく、陰の諧調、また陰にかかったテクスチャの色などを指定できます。<br />
+また、実験中の機能として陰色を２つ指定できる「2nd shade」機能を搭載しています。</p>
 
-<p><a href="https://discord.gg/ZeqMBut" target="_blank">相談用のDiscordサーバー</a>を建てました。こちらからご参加ください。</p>
+<h3 id="各項目について">各項目について</h3>
 
-<h3 id="twitterでも随時受け付けてます">Twitterでも随時受け付けてます</h3>
+<h4 id="border-pos">Border pos</h4>
 
-<p><a href="https://www.twitter.com/synqark/" target="_blank">@synqark</a> 当てにリプライとかDMを飛ばしていただければ対応できるかも？</p>
+<p>影の境目となる地点を指定できます。</p>
 
-<h3 id="直接コンタクトしたい">直接コンタクトしたい</h3>
+<h4 id="border-blur-border-blur-mask">Border blur / Border blur Mask</h4>
 
-<p>シェーダーでの表現方法に関する質問であれば、後から他の人が追えるようにできるだけオープンな場でお願いしたいです。<br />
-アバターへの同梱方法や、使用可否の確認など、表現以外の話であれば、TwitterのDMを使うか、 <code>virtually.synqarks@gmail.com</code> まで連絡下さい。</p>
+<p>影の境目をどの程度グラデーションさせるかを指定します。0で境目がくっきりします。<br />
+Border blur Maskを使うことで、下記の画像のように同一メッシュ内でも陰影の間隔を設定できます。</p>
+
+<h4 id="strength-strength-mask">Strength / Strength Mask</h4>
+
+<p>　陰影の暗さをスライダーで指定します。<br />
+　また、必要に応じてマスクテクスチャを使いStrengthの値を乗算できます。<br />
+　（ドローツールにある一般的なマスクと同じ意味です。）<br />
+　「顔を除いて全体に陰を付けたい」などの場合は、顔だけを黒く、それ以外を白く塗りつぶしたテクスチャを設定して実現できます。<br />
+　※Custom Shadeを使用中は設定ができません。</p>
+
+<h4 id="use-steps">Use Steps</h4>
+
+<p>　Shadow borderで指定した陰のグラデーションをポスタライズ（n諧調化）する場合にチェックします。<br />
+スライダーで指定した数字（小数点は切り捨て）分に色が切り分けられます。</p>
+
+<h4 id="use-custom-shade">Use Custom Shade</h4>
+
+<p>陰の部分をシェーダーに任せずに、独自で色またはテクスチャを指定したい場合にチェックします。</p>
+
+<h4 id="mix-default-shadow">Mix Default Shadow</h4>
+
+<p>下記で設定した色に対して、シェーダーが決めた「本来の陰の色」の合成割合を指定します</p>
+
+<h4 id="use-shade-texture-shade-texture">Use Shade Texture → Shade Texture</h4>
+
+<p>陰にあたる部分をテクスチャを使って表現したい場合、設定します。<br />
+　　（より良いサンプル動画募集してます..）</p>
+
+<h4 id="hue-shift-saturation-value">Hue Shift / Saturation / Value</h4>
+
+<p>陰にあたる部分を「色相/彩度/明度」を変更して設定する場合は、Shade Textureにチェックを入れずにスライダーで設定します。</p>
+
+<h4 id="2nd-shade-実験中の機能">2nd shade (実験中の機能）</h4>
+
+<p>より暗い陰の部分に関して指定する色を同様に設定できます</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -593,6 +646,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -605,6 +659,61 @@
             
             
                 
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -729,19 +838,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -765,42 +861,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -822,10 +882,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/samples/" title="シェーダー作例(WIP)"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/alphamask_alphacutout/" title="AlphaMask / AlphaCutout"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/feature/" title="Arktoon-Shaders のとくちょう" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/gloss/" title="Gloss" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -856,3 +916,4 @@
 
   </body>
 </html>
+

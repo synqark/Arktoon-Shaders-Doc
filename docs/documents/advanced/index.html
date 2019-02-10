@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.55.0-DEV" />
-    <meta name="description" content="困った？それとも別の用件？">
+    <meta name="description" content="">
 
 
     <link rel="shortcut icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
-    <title>お問い合わせ :: How to use Arktoon-Shaders</title>
+    <title>Advanced :: How to use Arktoon-Shaders</title>
 
     
     <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/help/">
+  <body class="" data-url="/documents/advanced/">
     <nav id="sidebar" class="">
 
 
@@ -125,7 +125,7 @@
   
     
     <li data-nav-id="/documents/" title="各カテゴリの機能について" class="dd-item 
-        
+        parent
         
         
         ">
@@ -339,7 +339,7 @@
  
   
     
-      <li data-nav-id="/documents/advanced/" title="Advanced" class="dd-item ">
+      <li data-nav-id="/documents/advanced/" title="Advanced" class="dd-item active">
         <a href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/advanced/">
         Advanced
         
@@ -388,8 +388,8 @@
   
     
     <li data-nav-id="/help/" title="お問い合わせ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://synqark.github.io/Arktoon-Shaders-Doc/help/">
@@ -448,7 +448,13 @@
             
           
           
-            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > お問い合わせ
+            
+            
+          
+          
+            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > <a href='https://synqark.github.io/Arktoon-Shaders-Doc/documents/'>各カテゴリの機能について</a> > Advanced
+          
+        
           
         
           
@@ -465,9 +471,15 @@
 <ul>
 <li>
 <ul>
-<li><a href="#discordサーバーがあります">Discordサーバーがあります。</a></li>
-<li><a href="#twitterでも随時受け付けてます">Twitterでも随時受け付けてます</a></li>
-<li><a href="#直接コンタクトしたい">直接コンタクトしたい</a></li>
+<li><a href="#なにこれ">なにこれ？</a></li>
+<li><a href="#各項目について">各項目について</a>
+<ul>
+<li><a href="#lights-sampling-style-デフォルト-arktoon">Lights → Sampling Style (デフォルト：Arktoon）</a></li>
+<li><a href="#directional-shadow-indirect-face-intensity-デフォルト-0-25">Directional Shadow → Indirect face Intensity（デフォルト：0.25）</a></li>
+<li><a href="#pointlight">PointLight</a></li>
+<li><a href="#shade-from-other-meshes">Shade from other meshes</a></li>
+<li><a href="#matcap-shadecap">MatCap / ShadeCap</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -483,7 +495,7 @@
         
         <div id="body-inner">
           
-            <h1>お問い合わせ</h1>
+            <h1>Advanced</h1>
           
 
         
@@ -491,25 +503,45 @@
 
 
 
-<p>困った？それとも別の用件？</p>
+<h3 id="なにこれ">なにこれ？</h3>
 
-<h3 id="discordサーバーがあります">Discordサーバーがあります。</h3>
+<p>説明が面倒だったり普段使わなかったり、実験的な設定項目をここに隠しています。</p>
 
-<p><a href="https://discord.gg/ZeqMBut" target="_blank">相談用のDiscordサーバー</a>を建てました。こちらからご参加ください。</p>
+<h3 id="各項目について">各項目について</h3>
 
-<h3 id="twitterでも随時受け付けてます">Twitterでも随時受け付けてます</h3>
+<h4 id="lights-sampling-style-デフォルト-arktoon">Lights → Sampling Style (デフォルト：Arktoon）</h4>
 
-<p><a href="https://www.twitter.com/synqark/" target="_blank">@synqark</a> 当てにリプライとかDMを飛ばしていただければ対応できるかも？</p>
+<p>間接光の取得条件を オリジナル(Arktoon)　および Cubed-Unity-Shader (Cubed)の2択から選択できます。</p>
 
-<h3 id="直接コンタクトしたい">直接コンタクトしたい</h3>
+<h4 id="directional-shadow-indirect-face-intensity-デフォルト-0-25">Directional Shadow → Indirect face Intensity（デフォルト：0.25）</h4>
 
-<p>シェーダーでの表現方法に関する質問であれば、後から他の人が追えるようにできるだけオープンな場でお願いしたいです。<br />
-アバターへの同梱方法や、使用可否の確認など、表現以外の話であれば、TwitterのDMを使うか、 <code>virtually.synqarks@gmail.com</code> まで連絡下さい。</p>
+<p>「陰色」の明るさを微調整します
+Shadow Strengthと似たような感じですが、「陰色」の強度ではなく、「陰色」そのものを決定します。
+Vertex Colors → Color blend to [diffuse, emissive] (デフォルト：0）
+メッシュに頂点カラーがある場合、こちらのスライダーを上げることで、
+Diffuse (≒Main Texture） / Emissive にその色を乗せることができます。</p>
+
+<h4 id="pointlight">PointLight</h4>
+
+<p>「平行光源ではないリアルタイムライト」から受ける光の陰影の強さ・境界などを設定します。　
+PointLight Shadows → Use Per-vertex Light（デフォルト：オン）
+「頂点ライティング」モードのポイントライトから光を受けるかを設定します。
+基本的にオンで良いですが、Cubed-Shaderなど他のシェーダーと光の当たり方を合わせる時や、鏡の奥で輪郭の点滅が気になる場合はオフにしてください。</p>
+
+<h4 id="shade-from-other-meshes">Shade from other meshes</h4>
+
+<p>「他のメッシュから受けた影」とみなすための計算材料です。
+基本的に無視してください。</p>
+
+<h4 id="matcap-shadecap">MatCap / ShadeCap</h4>
+
+<p>MatCapやShadeCapで使用している計算式を切り替えます。</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -593,6 +625,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -605,6 +638,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -766,6 +802,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -776,22 +813,6 @@
                     
             
         
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -801,6 +822,24 @@
             
                 
                     
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -822,10 +861,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/samples/" title="シェーダー作例(WIP)"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/parallaxed/" title="Parallaxed Emission"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/feature/" title="Arktoon-Shaders のとくちょう" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/samples/" title="シェーダー作例(WIP)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -856,3 +895,4 @@
 
   </body>
 </html>
+
