@@ -117,7 +117,21 @@
       <pubDate>Sun, 10 Feb 2019 17:18:04 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/varieties/</guid>
-      <description></description>
+      <description>arktoon/Opaque 不透明なマテリアルの場合、こちらを設定してください。
+(オ(ｩ)ペークと読むらしいです）
+arktoon/AlphaCutout 不透明と透明が明白に分かれている物体を表現する場合、こちらを指定してください。
+Main Textureの透明度でカットアウト（切り抜き）が行われます。
+影も切り抜いた形状で投写されます。
+arktoon/Fade 物体に半透明を含む場合、こちらを指定してください。
+落とす影も透明度に応じてディザリング処理されます。
+arktoon/FadeRefracted 物体に半透明を含み、かつ奥の映像を屈折させたい場合、こちらを指定してください。
+（パスが1個増えるため、屈折が不要であればFadeを使ってください）
+arktoon/Stencil/Writer(またはReader)/Cutout 描画と同時に、ステンシルバッファの書き込み（Writer）、
+および読み込んで比較して表示制御（Reader）を実施します。
+それ以外の機能はCutoutと同等です。
+arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。
+arktoon/Stencil/Reader/Fade 上記「arktoon/Stencil/Reader/Cutout」のFadeバリエーションになっています。
+arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。</description>
     </item>
     
     <item>
@@ -126,7 +140,21 @@
       <pubDate>Sun, 10 Feb 2019 17:18:04 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/varieties/</guid>
-      <description></description>
+      <description>arktoon/Opaque 不透明なマテリアルの場合、こちらを設定してください。
+(オ(ｩ)ペークと読むらしいです）
+arktoon/AlphaCutout 不透明と透明が明白に分かれている物体を表現する場合、こちらを指定してください。
+Main Textureの透明度でカットアウト（切り抜き）が行われます。
+影も切り抜いた形状で投写されます。
+arktoon/Fade 物体に半透明を含む場合、こちらを指定してください。
+落とす影も透明度に応じてディザリング処理されます。
+arktoon/FadeRefracted 物体に半透明を含み、かつ奥の映像を屈折させたい場合、こちらを指定してください。
+（パスが1個増えるため、屈折が不要であればFadeを使ってください）
+arktoon/Stencil/Writer(またはReader)/Cutout 描画と同時に、ステンシルバッファの書き込み（Writer）、
+および読み込んで比較して表示制御（Reader）を実施します。
+それ以外の機能はCutoutと同等です。
+arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。
+arktoon/Stencil/Reader/Fade 上記「arktoon/Stencil/Reader/Cutout」のFadeバリエーションになっています。
+arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。</description>
     </item>
     
     <item>
@@ -150,39 +178,49 @@ assacas</description>
     </item>
     
     <item>
-      <title>シェーダー作例</title>
+      <title>シェーダー作例(WIP)</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/samples/</link>
       <pubDate>Sun, 10 Feb 2019 17:24:25 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/samples/</guid>
-      <description></description>
+      <description> 頻繁に見られる手法とか、よく聞くけど説明が複雑なやつとかを作る(WIP)
+雑にイラスト調の陰色を使う（Custom Shade / HSV） 体の一部に陰がかからないようにする（Shadow strength mask） 体の一部の陰を柔らかくする（Shadow blur mask） 装飾などに光沢を出す（Gloss / Reflection / MatCap） カメラの方向から陰を作りたい（Shade Cap） メッシュ内部に輪郭を作る（Rim） </description>
     </item>
     
     <item>
-      <title>シェーダー作例</title>
+      <title>シェーダー作例(WIP)</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/samples/</link>
       <pubDate>Sun, 10 Feb 2019 17:24:25 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/samples/</guid>
-      <description></description>
+      <description> 頻繁に見られる手法とか、よく聞くけど説明が複雑なやつとかを作る(WIP)
+雑にイラスト調の陰色を使う（Custom Shade / HSV） 体の一部に陰がかからないようにする（Shadow strength mask） 体の一部の陰を柔らかくする（Shadow blur mask） 装飾などに光沢を出す（Gloss / Reflection / MatCap） カメラの方向から陰を作りたい（Shade Cap） メッシュ内部に輪郭を作る（Rim） </description>
     </item>
     
     <item>
-      <title>わからん、助けて！</title>
+      <title>お問い合わせ</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/help/</link>
       <pubDate>Sun, 10 Feb 2019 17:25:47 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/help/</guid>
-      <description></description>
+      <description>困った？それとも別の用件？
+Discordサーバーがあります。 相談用のDiscordサーバーを建てました。こちらからご参加ください。
+ Twitterでも随時受け付けてます @synqark 当てにリプライとかDMを飛ばしていただければ対応できるかも？
+直接コンタクトしたい シェーダーでの表現方法に関する質問であれば、後から他の人が追えるようにできるだけオープンな場でお願いしたいです。
+アバターへの同梱方法や、使用可否の確認など、表現以外の話であれば、TwitterのDMを使うか、 virtually.synqarks@gmail.com まで連絡下さい。</description>
     </item>
     
     <item>
-      <title>わからん、助けて！</title>
+      <title>お問い合わせ</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/help/</link>
       <pubDate>Sun, 10 Feb 2019 17:25:47 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/help/</guid>
-      <description></description>
+      <description>困った？それとも別の用件？
+Discordサーバーがあります。 相談用のDiscordサーバーを建てました。こちらからご参加ください。
+ Twitterでも随時受け付けてます @synqark 当てにリプライとかDMを飛ばしていただければ対応できるかも？
+直接コンタクトしたい シェーダーでの表現方法に関する質問であれば、後から他の人が追えるようにできるだけオープンな場でお願いしたいです。
+アバターへの同梱方法や、使用可否の確認など、表現以外の話であれば、TwitterのDMを使うか、 virtually.synqarks@gmail.com まで連絡下さい。</description>
     </item>
     
   </channel>

@@ -9,23 +9,23 @@
 
     <link rel="shortcut icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
-    <title>シェーダー作例 :: How to use Arktoon-Shaders</title>
+    <title>シェーダー作例(WIP) :: How to use Arktoon-Shaders</title>
 
     
     <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/nucleus.css?1549789586" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/fontawesome-all.min.css?1549789586" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/hybrid.css?1549789586" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/featherlight.min.css?1549789586" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/perfect-scrollbar.min.css?1549789586" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/auto-complete.css?1549789586" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/theme.css?1549789586" rel="stylesheet">
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/hugo-theme.css?1549789586" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/nucleus.css?1549791889" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/fontawesome-all.min.css?1549791889" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/hybrid.css?1549791889" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/featherlight.min.css?1549791889" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/perfect-scrollbar.min.css?1549791889" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/auto-complete.css?1549791889" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/theme.css?1549791889" rel="stylesheet">
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/hugo-theme.css?1549791889" rel="stylesheet">
     
-      <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/theme-blue.css?1549789586" rel="stylesheet">
+      <link href="https://synqark.github.io/Arktoon-Shaders-Doc/css/theme-blue.css?1549791889" rel="stylesheet">
     
 
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/jquery-2.x.min.js?1549789586"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/jquery-2.x.min.js?1549791889"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -146,13 +146,13 @@
  
   
     
-    <li data-nav-id="/samples/" title="シェーダー作例" class="dd-item 
+    <li data-nav-id="/samples/" title="シェーダー作例(WIP)" class="dd-item 
         parent
         active
         
         ">
       <a href="https://synqark.github.io/Arktoon-Shaders-Doc/samples/">
-          シェーダー作例
+          シェーダー作例(WIP)
           
       </a>
       
@@ -168,13 +168,13 @@
  
   
     
-    <li data-nav-id="/help/" title="わからん、助けて！" class="dd-item 
+    <li data-nav-id="/help/" title="お問い合わせ" class="dd-item 
         
         
         
         ">
       <a href="https://synqark.github.io/Arktoon-Shaders-Doc/help/">
-          わからん、助けて！
+          お問い合わせ
           
       </a>
       
@@ -229,7 +229,7 @@
             
           
           
-            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > シェーダー作例
+            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > シェーダー作例(WIP)
           
         
           
@@ -240,7 +240,22 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#雑にイラスト調の陰色を使う-custom-shade-hsv">雑にイラスト調の陰色を使う（Custom Shade / HSV）</a></li>
+<li><a href="#体の一部に陰がかからないようにする-shadow-strength-mask">体の一部に陰がかからないようにする（Shadow strength mask）</a></li>
+<li><a href="#体の一部の陰を柔らかくする-shadow-blur-mask">体の一部の陰を柔らかくする（Shadow blur mask）</a></li>
+<li><a href="#装飾などに光沢を出す-gloss-reflection-matcap">装飾などに光沢を出す（Gloss / Reflection / MatCap）</a></li>
+<li><a href="#カメラの方向から陰を作りたい-shade-cap">カメラの方向から陰を作りたい（Shade Cap）</a></li>
+<li><a href="#メッシュ内部に輪郭を作る-rim">メッシュ内部に輪郭を作る（Rim）</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -252,12 +267,27 @@
         
         <div id="body-inner">
           
-            <h1>シェーダー作例</h1>
+            <h1>シェーダー作例(WIP)</h1>
           
 
         
 
 
+
+
+<p>頻繁に見られる手法とか、よく聞くけど説明が複雑なやつとかを作る(WIP)</p>
+
+<h3 id="雑にイラスト調の陰色を使う-custom-shade-hsv">雑にイラスト調の陰色を使う（Custom Shade / HSV）</h3>
+
+<h3 id="体の一部に陰がかからないようにする-shadow-strength-mask">体の一部に陰がかからないようにする（Shadow strength mask）</h3>
+
+<h3 id="体の一部の陰を柔らかくする-shadow-blur-mask">体の一部の陰を柔らかくする（Shadow blur mask）</h3>
+
+<h3 id="装飾などに光沢を出す-gloss-reflection-matcap">装飾などに光沢を出す（Gloss / Reflection / MatCap）</h3>
+
+<h3 id="カメラの方向から陰を作りたい-shade-cap">カメラの方向から陰を作りたい（Shade Cap）</h3>
+
+<h3 id="メッシュ内部に輪郭を作る-rim">メッシュ内部に輪郭を作る（Rim）</h3>
 
 
 <footer class=" footline" >
@@ -405,7 +435,7 @@
 			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/" title="各カテゴリの機能について"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/help/" title="わからん、助けて！" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/help/" title="お問い合わせ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -415,20 +445,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/clipboard.min.js?1549789586"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.min.js?1549789586"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.jquery.min.js?1549789586"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/jquery.sticky.js?1549789586"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/featherlight.min.js?1549789586"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/html5shiv-printshiv.min.js?1549789586"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/highlight.pack.js?1549789586"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/clipboard.min.js?1549791889"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.min.js?1549791889"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/perfect-scrollbar.jquery.min.js?1549791889"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/jquery.sticky.js?1549791889"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/featherlight.min.js?1549791889"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/html5shiv-printshiv.min.js?1549791889"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/highlight.pack.js?1549791889"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/modernizr.custom.71422.js?1549789586"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/learn.js?1549789586"></script>
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/hugo-learn.js?1549789586"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/modernizr.custom.71422.js?1549791889"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/learn.js?1549791889"></script>
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/js/hugo-learn.js?1549791889"></script>
 
-    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.css?1549789586" type="text/css" rel="stylesheet" />
-    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.js?1549789586"></script>
+    <link href="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.css?1549791889" type="text/css" rel="stylesheet" />
+    <script src="https://synqark.github.io/Arktoon-Shaders-Doc/mermaid/mermaid.js?1549791889"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
