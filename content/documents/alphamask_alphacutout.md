@@ -13,6 +13,7 @@ weight: 2
 ## AlphaMask（Fade系列のバリエーション指定時に出現)
 ### できること
 マテリアルの透明度を、グレースケールテクスチャで追加指定することがきます。  
+{{< figure src="/images/cat_alphamask.jpg" >}}
 ### 各項目について
 #### Alpha Mask
 白黒テクスチャを指定すると、Commonカテゴリで指定した透明度を乗算します。  
@@ -21,6 +22,7 @@ Commonカテゴリでの透明度が1である場合、白黒テクスチャが�
 ## AlphaCutout (arktoon/AlphaCutout を指定時に出現）
 ### できること
 カットアウトの閾値（Main Textureに設定された透明度がいくつまでは不透明、いくつまでは半透明かを判断する値）を設定できます。
+{{< figure src="/images/cat_alphacutout.gif" >}}
 ### 各項目について
 #### Cutoff Adjust
 Main Textureのアルファの不透明/透明の閾値をスライダーで指定します。  
