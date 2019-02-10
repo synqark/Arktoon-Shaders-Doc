@@ -26,6 +26,7 @@ weight: 3
 #### Blur / Blur Mask
 影の境目をどの程度グラデーションさせるかを指定します。0で境目がくっきりします。  
 Border blur Maskを使うことで、下記の画像のように同一メッシュ内でも陰影の間隔を設定できます。
+{{< figure src="/images/cat_shadow5.png" >}}
 #### Use Steps / Steps
 　Shadow borderで指定した陰のグラデーションをポスタライズ（n諧調化）する場合にチェックします。  
 スライダーで指定した数字（小数点は切り捨て）分に色が切り分けられます。

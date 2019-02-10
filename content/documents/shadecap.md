@@ -11,16 +11,22 @@ weight: 9
 ---
 
 ### できること
-メッシュに対して、予め「ライティングされた陰」テクスチャを設定できます。
+メッシュに対して、予め「ライティングされた陰」テクスチャを設定できます。  
 MatCapの暗い版です。造語です。
+{{< figure src="/images/cat_shadecap.gif" >}}
 ### 各項目について
-#### Blend Mode (Darken:比較(暗), Multiply:乗算, Light Shutter:受光マスキング）
-ShadeCapをどのように合成するかを決定します
-#### Blend / Blend Mask
+#### (カテゴリバー）Blend Mode
+MatCapの色をどのように合成するかを設定します。  
+**Darken:比較(暗), Multiply:乗算, Light Shutter:受光マスキング**  
+となります
+##### Light Shutter:受光マスキングについて
+これは合成方法ではなく、Shade Cap テクスチャを光を受けている箇所にマスキングします。  
+つまり、黒いテクスチャを指定するとメッシュ全体が陰に入ったようになり、  
+白いテクスチャを指定すると何も起きてないように見えます。
+#### Blend & Mask
 Blend Modeで設定した方法でどの程度ブレンドするかを設定します。マスクテクスチャを使うことで、メッシュの部分ごとのブレンドを制御できます
 （黒色：0　～　白色：Blendの値）
+#### Texture
+ShadeCapテクスチャを指定します。
 #### Normal Map mix
 ShadeCapを着色する際にNormal mapをどの程度考慮するかをスライダーで指定します。
-#### Texture / Color
-MatCapテクスチャと色を指定します。
-今のところColorは意味を成しません。
