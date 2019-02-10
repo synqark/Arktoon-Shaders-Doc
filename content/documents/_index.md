@@ -16,6 +16,7 @@ weight: 4
 
 全編通して、販売3Dモデルである[量産型のらきゃっと](https://booth.pm/ja/items/1216498)を使用して説明いたします。  
 量産型のらきゃっと は、バーチャル美少女のらきゃっと([のらきゃっとチャンネル](https://www.youtube.com/channel/UC3iwL9Yz8LcKkJsnLPevOTQ)) から  
-公開・販売されている、文字通りのらきゃっとちゃんのマスプロダクションモデルです。
-
+公開・販売されている、文字通りのらきゃっとちゃんのマスプロダクションモデルです。    
+  
+©️のらきゃっとチャンネル
 {{< figure src="/images/sample_masscat.jpg" >}}
