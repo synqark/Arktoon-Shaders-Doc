@@ -9,3 +9,6 @@ canonifyurls = true
   themeVariant = "blue"
     # Disable search function. It will hide search bar
   disableSearch = true
+
+[blackfriday]
+  hrefTargetBlank = true
