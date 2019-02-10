@@ -58,8 +58,7 @@ Strength / Strength Mask 　陰影の暗さをスライダーで指定します�
 「顔を除いて全体に陰を付けたい」などの場合は、顔だけを黒く、それ以外を白く塗りつぶしたテクスチャを設定して実現できます。
 ※Custom Shadeを使用中は設定ができません。
 Blur / Blur Mask 影の境目をどの程度グラデーションさせるかを指定します。0で境目がくっきりします。
-Border blur Maskを使うことで、下記の画像のように同一メッシュ内でも陰影の間隔を設定できます。
-Use Steps / Steps 　Shadow borderで指定した陰のグラデーションをポスタライズ（n諧調化）する場合にチェックします。
+Border blur Maskを使うことで、下記の画像のように同一メッシュ内でも陰影の間隔を設定できます。   Use Steps / Steps 　Shadow borderで指定した陰のグラデーションをポスタライズ（n諧調化）する場合にチェックします。
 スライダーで指定した数字（小数点は切り捨て）分に色が切り分けられます。
 Use Custom Shade 陰の部分をシェーダーに任せずに、独自で色またはテクスチャを指定したい場合にチェックします。   Mix Default Shade 下記で設定した色に対して、シェーダーが決めた「本来の陰の色」の合成割合を指定します
 1st shade 以降のオプションは、1つ目の陰に対して適用されます。
@@ -132,13 +131,12 @@ Suppress Base Color Reflectionの着色に応じてメッシュ本来の色（�
       <pubDate>Sun, 10 Feb 2019 21:28:17 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/rim/</guid>
-      <description>できること メッシュのリム（ヘリ、枠）に対する光を指定できます（リムライトと呼ばれます）
-各項目について Blend / Blend Mask Rimをどの程度着色するかを設定します。マスクテクスチャを使うことで、メッシュの部分ごとのブレンドを制御できます （黒色：0　～　白色：Blendの値）
+      <description>できること メッシュのリム（ヘリ、枠）に対する光を指定できます（リムライトと呼ばれます）   各項目について Blend &amp;amp; Mask Rimをどの程度着色するかを設定します。マスクテクスチャを使うことで、メッシュの部分ごとのブレンドを制御できます （黒色：0　～　白色：Blendの値）
+Texture &amp;amp; Color リムの色をカラーおよびテクスチャで設定します。
+Use Base Color CommonカテゴリのMain Textureで設定している色を、Texture &amp;amp; Colorで指定した色に乗算します。
 Shadow mix 陰影部分にどの程度Rimを適用”しない”かをスライダーで指定します。
 Fresnel Power フレネル強度を設定します。高いほど外側に着色が寄っていきます
-Upper side width リムライトの縁の太さを設定します。この値とFresnelPowerの値を上げることで メッシュ内部でアウトラインを表現するのに使用できます。
-Use Base Color Main Textureで設定している色を使います。
-Color / Texture リムの色をカラーおよびテクスチャで設定します。 [Use Base Color]が設定されている場合、Main Textureの色と乗算します。</description>
+Upper side width リムライトの縁の太さを設定します。この値とFresnelPowerの値を上げることで メッシュ内部でアウトラインを表現するのに使用できます。</description>
     </item>
     
     <item>
@@ -147,11 +145,16 @@ Color / Texture リムの色をカラーおよびテクスチャで設定しま�
       <pubDate>Sun, 10 Feb 2019 21:29:02 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/shadecap/</guid>
-      <description>できること メッシュに対して、予め「ライティングされた陰」テクスチャを設定できます。 MatCapの暗い版です。造語です。
-各項目について Blend Mode (Darken:比較(暗), Multiply:乗算, Light Shutter:受光マスキング） ShadeCapをどのように合成するかを決定します
-Blend / Blend Mask Blend Modeで設定した方法でどの程度ブレンドするかを設定します。マスクテクスチャを使うことで、メッシュの部分ごとのブレンドを制御できます （黒色：0　～　白色：Blendの値）
-Normal Map mix ShadeCapを着色する際にNormal mapをどの程度考慮するかをスライダーで指定します。
-Texture / Color MatCapテクスチャと色を指定します。 今のところColorは意味を成しません。</description>
+      <description>できること メッシュに対して、予め「ライティングされた陰」テクスチャを設定できます。
+MatCapの暗い版です。造語です。   各項目について (カテゴリバー）Blend Mode MatCapの色をどのように合成するかを設定します。
+Darken:比較(暗), Multiply:乗算, Light Shutter:受光マスキング
+となります
+Light Shutter:受光マスキングについて これは合成方法ではなく、Shade Cap テクスチャを光を受けている箇所にマスキングします。
+つまり、黒いテクスチャを指定するとメッシュ全体が陰に入ったようになり、
+白いテクスチャを指定すると何も起きてないように見えます。
+Blend &amp;amp; Mask Blend Modeで設定した方法でどの程度ブレンドするかを設定します。マスクテクスチャを使うことで、メッシュの部分ごとのブレンドを制御できます （黒色：0　～　白色：Blendの値）
+Texture ShadeCapテクスチャを指定します。
+Normal Map mix ShadeCapを着色する際にNormal mapをどの程度考慮するかをスライダーで指定します。</description>
     </item>
     
     <item>
@@ -160,10 +163,11 @@ Texture / Color MatCapテクスチャと色を指定します。 今のところ
       <pubDate>Sun, 10 Feb 2019 21:30:06 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/parallaxed/</guid>
-      <description>できること 視差のあるEmissionテクスチャを貼り付けることができます。
-各項目について Texture / Color 表示させたいテクスチャを指定します。Colorを設定して乗算できます。
-Mask Parallaxed Emissionを適用する場所を、白黒のテクスチャで指定します。
-Parallax Depth / Parallax Depth Mask 適用したいものの視差を設定します。 正の値だと手前にくるようになり、負の値だと奥に行ったようになります。 Parallax Depth Maskを指定することで、スライダーで指定したDepthの値に乗算します。
+      <description>できること 視差のあるEmissionテクスチャを貼り付けることができます。   各項目について Texture &amp;amp; Color 表示させたいテクスチャを指定します。Colorを設定して乗算できます。
+TexCol Mask Parallaxed Emissionを適用する場所を、白黒のテクスチャで指定します。
+Parallax Depth &amp;amp; Mask 視差の深度を設定します。
+正の値だと手前にくるようになり、負の値だと奥に行ったようになります。
+Parallax Depth Maskを指定することで、スライダーで指定したDepthの値に乗算してマスキングできます
 Invert Depth Mask Depth Maskを逆にします。黒=1　～　白=0としてDepthの値を乗算します。</description>
     </item>
     
@@ -173,10 +177,15 @@ Invert Depth Mask Depth Maskを逆にします。黒=1　～　白=0としてDep
       <pubDate>Sun, 10 Feb 2019 21:30:57 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/advanced/</guid>
-      <description>なにこれ？ 説明が面倒だったり普段使わなかったり、実験的な設定項目をここに隠しています。
-各項目について Lights → Sampling Style (デフォルト：Arktoon） 間接光の取得条件を オリジナル(Arktoon)　および Cubed-Unity-Shader (Cubed)の2択から選択できます。
-Directional Shadow → Indirect face Intensity（デフォルト：0.25） 「陰色」の明るさを微調整します Shadow Strengthと似たような感じですが、「陰色」の強度ではなく、「陰色」そのものを決定します。 Vertex Colors → Color blend to [diffuse, emissive] (デフォルト：0） メッシュに頂点カラーがある場合、こちらのスライダーを上げることで、 Diffuse (≒Main Texture） / Emissive にその色を乗せることができます。
-PointLight 「平行光源ではないリアルタイムライト」から受ける光の陰影の強さ・境界などを設定します。　PointLight Shadows → Use Per-vertex Light（デフォルト：オン） 「頂点ライティング」モードのポイントライトから光を受けるかを設定します。 基本的にオンで良いですが、Cubed-Shaderなど他のシェーダーと光の当たり方を合わせる時や、鏡の奥で輪郭の点滅が気になる場合はオフにしてください。
+      <description>なにこれ？ 説明が面倒だったり普段使わなかったり、実験的な設定項目をここに隠しています。   各項目について Lights → Sampling Style (デフォルト：Arktoon） 間接光の取得条件を オリジナル(Arktoon)　および Cubed-Unity-Shader (Cubed)の2択から選択できます。
+Directional Shadow → Indirect face Intensity（デフォルト：0.25） 「陰色」の明るさを微調整します
+Shadow Strengthと似たような感じですが、「陰色」の強度ではなく、「陰色」そのものを決定します。
+Vertex Colors → Color blend to [diffuse, emissive] (デフォルト：0）
+メッシュに頂点カラーがある場合、こちらのスライダーを上げることで、
+Diffuse (≒Main Texture） / Emissive にその色を乗せることができます。
+PointLights 「平行光源ではないリアルタイムライト」から受ける光の陰影の強さ・境界などを設定します。　PointLight Shadows → Use Per-vertex Light（デフォルト：オン）
+「頂点ライティング」モードのポイントライトから光を受けるかを設定します。
+基本的にオンで良いですが、Cubed-Shaderなど他のシェーダーと光の当たり方を合わせる時や、鏡の奥で輪郭の点滅が気になる場合はオフにしてください。
 Shade from other meshes 「他のメッシュから受けた影」とみなすための計算材料です。 基本的に無視してください。
 MatCap / ShadeCap MatCapやShadeCapで使用している計算式を切り替えます。</description>
     </item>
