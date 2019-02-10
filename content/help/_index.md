@@ -3,7 +3,7 @@ title: "お問い合わせ"
 date: 2019-02-10T17:25:47+09:00
 draft: false
 categories: ["", ""]
-description: ""
+description: "困った？それとも別の用件？"
 image: ""
 tags: ["", ""]
 author: ""
@@ -12,9 +12,9 @@ weight: 6
 困った？それとも別の用件？
 
 ### Discordサーバーがあります。
-相談用のDiscordサーバーを建てました。こちらからご参加ください。  
+[相談用のDiscordサーバー](https://discord.gg/ZeqMBut)を建てました。こちらからご参加ください。  
 
-<iframe src="https://discordapp.com/widget?id=516235663004401674&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+
 
 ### Twitterでも随時受け付けてます
 [@synqark](https://www.twitter.com/synqark/) 当てにリプライとかDMを飛ばしていただければ対応できるかも？
