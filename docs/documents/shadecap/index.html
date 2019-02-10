@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.55.0-DEV" />
-    <meta name="description" content="困った？それとも別の用件？">
+    <meta name="description" content="">
 
 
     <link rel="shortcut icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
-    <title>お問い合わせ :: How to use Arktoon-Shaders</title>
+    <title>Shadecap :: How to use Arktoon-Shaders</title>
 
     
     <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/help/">
+  <body class="" data-url="/documents/shadecap/">
     <nav id="sidebar" class="">
 
 
@@ -125,7 +125,7 @@
   
     
     <li data-nav-id="/documents/" title="各カテゴリの機能について" class="dd-item 
-        
+        parent
         
         
         ">
@@ -301,7 +301,7 @@
  
   
     
-      <li data-nav-id="/documents/shadecap/" title="Shadecap" class="dd-item ">
+      <li data-nav-id="/documents/shadecap/" title="Shadecap" class="dd-item active">
         <a href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/shadecap/">
         Shadecap
         
@@ -388,8 +388,8 @@
   
     
     <li data-nav-id="/help/" title="お問い合わせ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://synqark.github.io/Arktoon-Shaders-Doc/help/">
@@ -448,7 +448,13 @@
             
           
           
-            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > お問い合わせ
+            
+            
+          
+          
+            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > <a href='https://synqark.github.io/Arktoon-Shaders-Doc/documents/'>各カテゴリの機能について</a> > Shadecap
+          
+        
           
         
           
@@ -465,9 +471,14 @@
 <ul>
 <li>
 <ul>
-<li><a href="#discordサーバーがあります">Discordサーバーがあります。</a></li>
-<li><a href="#twitterでも随時受け付けてます">Twitterでも随時受け付けてます</a></li>
-<li><a href="#直接コンタクトしたい">直接コンタクトしたい</a></li>
+<li><a href="#できること">できること</a></li>
+<li><a href="#各項目について">各項目について</a>
+<ul>
+<li><a href="#blend-mode-darken-比較-暗-multiply-乗算-light-shutter-受光マスキング">Blend Mode (Darken:比較(暗), Multiply:乗算, Light Shutter:受光マスキング）</a></li>
+<li><a href="#blend-blend-mask">Blend / Blend Mask</a></li>
+<li><a href="#normal-map-mix">Normal Map mix</a></li>
+<li><a href="#texture-color">Texture / Color</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -483,7 +494,7 @@
         
         <div id="body-inner">
           
-            <h1>お問い合わせ</h1>
+            <h1>Shadecap</h1>
           
 
         
@@ -491,25 +502,36 @@
 
 
 
-<p>困った？それとも別の用件？</p>
+<h3 id="できること">できること</h3>
 
-<h3 id="discordサーバーがあります">Discordサーバーがあります。</h3>
+<p>メッシュに対して、予め「ライティングされた陰」テクスチャを設定できます。
+MatCapの暗い版です。造語です。</p>
 
-<p><a href="https://discord.gg/ZeqMBut" target="_blank">相談用のDiscordサーバー</a>を建てました。こちらからご参加ください。</p>
+<h3 id="各項目について">各項目について</h3>
 
-<h3 id="twitterでも随時受け付けてます">Twitterでも随時受け付けてます</h3>
+<h4 id="blend-mode-darken-比較-暗-multiply-乗算-light-shutter-受光マスキング">Blend Mode (Darken:比較(暗), Multiply:乗算, Light Shutter:受光マスキング）</h4>
 
-<p><a href="https://www.twitter.com/synqark/" target="_blank">@synqark</a> 当てにリプライとかDMを飛ばしていただければ対応できるかも？</p>
+<p>ShadeCapをどのように合成するかを決定します</p>
 
-<h3 id="直接コンタクトしたい">直接コンタクトしたい</h3>
+<h4 id="blend-blend-mask">Blend / Blend Mask</h4>
 
-<p>シェーダーでの表現方法に関する質問であれば、後から他の人が追えるようにできるだけオープンな場でお願いしたいです。<br />
-アバターへの同梱方法や、使用可否の確認など、表現以外の話であれば、TwitterのDMを使うか、 <code>virtually.synqarks@gmail.com</code> まで連絡下さい。</p>
+<p>Blend Modeで設定した方法でどの程度ブレンドするかを設定します。マスクテクスチャを使うことで、メッシュの部分ごとのブレンドを制御できます
+（黒色：0　～　白色：Blendの値）</p>
+
+<h4 id="normal-map-mix">Normal Map mix</h4>
+
+<p>ShadeCapを着色する際にNormal mapをどの程度考慮するかをスライダーで指定します。</p>
+
+<h4 id="texture-color">Texture / Color</h4>
+
+<p>MatCapテクスチャと色を指定します。
+今のところColorは意味を成しません。</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -593,6 +615,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -605,6 +628,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -734,6 +760,26 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -761,22 +807,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -800,7 +830,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -822,10 +851,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/samples/" title="シェーダー作例(WIP)"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/rim/" title="Rim"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/feature/" title="Arktoon-Shaders のとくちょう" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/parallaxed/" title="Parallaxed Emission" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -856,3 +885,4 @@
 
   </body>
 </html>
+

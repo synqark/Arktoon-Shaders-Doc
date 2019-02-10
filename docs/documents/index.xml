@@ -11,5 +11,179 @@
 	<atom:link href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Common</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/common/</link>
+      <pubDate>Sun, 10 Feb 2019 21:10:57 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/common/</guid>
+      <description>できること そのマテリアルの基本となる色の設定ができます。
+各項目について Main Texture マテリアルの基本色をテクスチャ×カラーで指定します。
+ここで設定された色は影や周囲の色の影響を受けます。
+Normal Map マテリアルの凹凸を表現するテクスチャを指定します。
+また指定されたテクスチャの強度をスライダーで設定できます。
+Emission マテリアルが発光している色をテクスチャ×カラーで設定します。
+ここで指定された色は影や周囲の色の影響を受けません。
+Is Double Sided 裏面を描画するかどうかを設定します。 （Cull Offではなく、裏面分の面を追加で生成しています）
+Flip backface normal 　裏面の法線を反転します。両面に設定したいメッシュが鉄などといった光を通さないものの場合に、適切な受光を設定します。　Backface Light intensity 　裏面の受光量を乗算で指定します。スカートの裏側など、必然的に暗い部分に関して倍率を下げることで自然な表現ができます。
+ZWrite （arktoon/Fade を指定時に表示） 透明に関する設定です。基本的にはONで触る必要がありませんが、
+負荷を考慮したい場合や、ONが意図した透過表現でない場合に変更してみてください。</description>
+    </item>
+    
+    <item>
+      <title>AlphaMask / AlphaCutout</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/alphamask_alphacutout/</link>
+      <pubDate>Sun, 10 Feb 2019 21:16:21 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/alphamask_alphacutout/</guid>
+      <description>AlphaMask（Fade系列のバリエーション指定時に出現) できること マテリアルの透明度を、グレースケールテクスチャで追加指定することがきます。
+各項目について Alpha Mask 白黒テクスチャを指定すると、Commonカテゴリで指定した透明度を乗算します。
+Commonカテゴリでの透明度が1である場合、白黒テクスチャがそのまま透明度となります。
+AlphaCutout (arktoon/AlphaCutout を指定時に出現） できること カットアウトの閾値（Main Textureに設定された透明度がいくつまでは不透明、いくつまでは半透明かを判断する値）を設定できます。
+各項目について Cutoff Adjust Main Textureのアルファの不透明/透明の閾値をスライダーで指定します。
+例：0.5が指定された場合、テクスチャのアルファ値が0～127が透明・128～255が不透明の扱いになります。</description>
+    </item>
+    
+    <item>
+      <title>Shadow</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/shadow/</link>
+      <pubDate>Sun, 10 Feb 2019 21:19:37 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/shadow/</guid>
+      <description>できること マテリアルの陰に関する調整ができます。
+陰の強さだけではなく、陰の諧調、また陰にかかったテクスチャの色などを指定できます。
+また、実験中の機能として陰色を２つ指定できる「2nd shade」機能を搭載しています。
+各項目について Border pos 影の境目となる地点を指定できます。
+Border blur / Border blur Mask 影の境目をどの程度グラデーションさせるかを指定します。0で境目がくっきりします。
+Border blur Maskを使うことで、下記の画像のように同一メッシュ内でも陰影の間隔を設定できます。
+Strength / Strength Mask 　陰影の暗さをスライダーで指定します。
+また、必要に応じてマスクテクスチャを使いStrengthの値を乗算できます。
+（ドローツールにある一般的なマスクと同じ意味です。）
+「顔を除いて全体に陰を付けたい」などの場合は、顔だけを黒く、それ以外を白く塗りつぶしたテクスチャを設定して実現できます。
+※Custom Shadeを使用中は設定ができません。
+Use Steps 　Shadow borderで指定した陰のグラデーションをポスタライズ（n諧調化）する場合にチェックします。
+スライダーで指定した数字（小数点は切り捨て）分に色が切り分けられます。
+Use Custom Shade 陰の部分をシェーダーに任せずに、独自で色またはテクスチャを指定したい場合にチェックします。
+Mix Default Shadow 下記で設定した色に対して、シェーダーが決めた「本来の陰の色」の合成割合を指定します
+Use Shade Texture → Shade Texture 陰にあたる部分をテクスチャを使って表現したい場合、設定します。
+（より良いサンプル動画募集してます..）
+Hue Shift / Saturation / Value 陰にあたる部分を「色相/彩度/明度」を変更して設定する場合は、Shade Textureにチェックを入れずにスライダーで設定します。
+2nd shade (実験中の機能） より暗い陰の部分に関して指定する色を同様に設定できます</description>
+    </item>
+    
+    <item>
+      <title>Gloss</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/gloss/</link>
+      <pubDate>Sun, 10 Feb 2019 21:23:17 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/gloss/</guid>
+      <description>できること リアルタイムライトに対する「つや」を表現できます。
+各項目について Smoothness / Smoothness Mask 面の「つやつや度」を設定します。高いほど光が集まり、強く反射します。
+Maskを指定することでメッシュの部分部分で設定が可能です。
+Metallic メタリック感を設定します。高いほど、メッシュの色が光に混ざります
+Color 反射する光の色に影響します。</description>
+    </item>
+    
+    <item>
+      <title>Outline</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/outline/</link>
+      <pubDate>Sun, 10 Feb 2019 21:25:08 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/outline/</guid>
+      <description>できること メッシュにアウトラインを設定できます。
+各項目について Width アウトラインの幅を設定します。
+Cutoff Mask / Cutoff Range アウトラインを「描画しない」箇所をマスクテクスチャで指定します。
+Cutoff Rangeを操作して描画しない部分を調整できます。
+Use Width Mask / Width Mask アウトラインの「太さ」にマスクをかけることができます。白:100%～黒:0%
+（太さの影響は、ポリゴン数に依存することに注意してください。）
+Color アウトラインの色を設定できます。
+Shadow mix 陰影をどの程度適用するかをスライダーで指定します。
+Base Color Mix Main Colorで指定したをColorに合成します。</description>
+    </item>
+    
+    <item>
+      <title>Matcap</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/matcap/</link>
+      <pubDate>Sun, 10 Feb 2019 21:26:05 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/matcap/</guid>
+      <description>できること メッシュに対して、予め「ライティングされた光源」（＝MaterialCapture, MatCap）テクスチャを設定できます。
+各項目について Blend Mode (Add:加算, Lighten:比較(明), Screen:スクリーン合成） MatCapの色をどのように合成するかを設定します。
+Blend / Blend Mask Blend Modeで設定した方法でどの程度ブレンドするかを設定します。マスクテクスチャを使うことで、メッシュの部分ごとのブレンドを制御できます （黒色：0　～　白色：Blendの値）
+Normal Map mix MatCapを着色する際にNormal mapをどの程度考慮するかをスライダーで指定します。
+Shadow mix 陰影部分にどの程度MatCapを適用”しない”かをスライダーで指定します。
+Texture / Color MatCapテクスチャと色を指定します。</description>
+    </item>
+    
+    <item>
+      <title>Reflection</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/reflection/</link>
+      <pubDate>Sun, 10 Feb 2019 21:27:30 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/reflection/</guid>
+      <description>できること メッシュに対して鏡面反射を設定します。
+各項目について Use Reflection Probe シーン中のReflection Probeを使用する場合はチェックします。 チェック無し、またはチェックがあってもシーンに存在しない場合はCubemapが使用されます。
+Smoothness / Smoothness Mask 面の「つやつや度」を設定します。高いほど光が集まり、強く反射します。 Maskを指定することでメッシュの部分部分で設定が可能です。
+Normal Map mix Reflectionを着色する際にNormal mapをどの程度考慮するかをスライダーで指定します。
+Shadow mix 陰影部分にどの程度Reflectionを適用”しない”かをスライダーで指定します。
+Suppress Base Color Reflectionの着色に応じてメッシュ本来の色（≒ Main Color）をどの程度「抑える」かをスライダーで設定します。
+Cubemap（Fallback） 反射もととなるCubemapテクスチャを設定します。 Use Reflection Probeがオンの場合は、シーンに存在しない場合に自動的に設定されます。</description>
+    </item>
+    
+    <item>
+      <title>Rim</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/rim/</link>
+      <pubDate>Sun, 10 Feb 2019 21:28:17 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/rim/</guid>
+      <description>できること メッシュのリム（ヘリ、枠）に対する光を指定できます（リムライトと呼ばれます）
+各項目について Blend / Blend Mask Rimをどの程度着色するかを設定します。マスクテクスチャを使うことで、メッシュの部分ごとのブレンドを制御できます （黒色：0　～　白色：Blendの値）
+Shadow mix 陰影部分にどの程度Rimを適用”しない”かをスライダーで指定します。
+Fresnel Power フレネル強度を設定します。高いほど外側に着色が寄っていきます
+Upper side width リムライトの縁の太さを設定します。この値とFresnelPowerの値を上げることで メッシュ内部でアウトラインを表現するのに使用できます。
+Use Base Color Main Textureで設定している色を使います。
+Color / Texture リムの色をカラーおよびテクスチャで設定します。 [Use Base Color]が設定されている場合、Main Textureの色と乗算します。</description>
+    </item>
+    
+    <item>
+      <title>Shadecap</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/shadecap/</link>
+      <pubDate>Sun, 10 Feb 2019 21:29:02 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/shadecap/</guid>
+      <description>できること メッシュに対して、予め「ライティングされた陰」テクスチャを設定できます。 MatCapの暗い版です。造語です。
+各項目について Blend Mode (Darken:比較(暗), Multiply:乗算, Light Shutter:受光マスキング） ShadeCapをどのように合成するかを決定します
+Blend / Blend Mask Blend Modeで設定した方法でどの程度ブレンドするかを設定します。マスクテクスチャを使うことで、メッシュの部分ごとのブレンドを制御できます （黒色：0　～　白色：Blendの値）
+Normal Map mix ShadeCapを着色する際にNormal mapをどの程度考慮するかをスライダーで指定します。
+Texture / Color MatCapテクスチャと色を指定します。 今のところColorは意味を成しません。</description>
+    </item>
+    
+    <item>
+      <title>Parallaxed Emission</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/parallaxed/</link>
+      <pubDate>Sun, 10 Feb 2019 21:30:06 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/parallaxed/</guid>
+      <description>できること 視差のあるEmissionテクスチャを貼り付けることができます。
+各項目について Texture / Color 表示させたいテクスチャを指定します。Colorを設定して乗算できます。
+Mask Parallaxed Emissionを適用する場所を、白黒のテクスチャで指定します。
+Parallax Depth / Parallax Depth Mask 適用したいものの視差を設定します。 正の値だと手前にくるようになり、負の値だと奥に行ったようになります。 Parallax Depth Maskを指定することで、スライダーで指定したDepthの値に乗算します。
+Invert Depth Mask Depth Maskを逆にします。黒=1　～　白=0としてDepthの値を乗算します。</description>
+    </item>
+    
+    <item>
+      <title>Advanced</title>
+      <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/advanced/</link>
+      <pubDate>Sun, 10 Feb 2019 21:30:57 +0900</pubDate>
+      
+      <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/advanced/</guid>
+      <description>なにこれ？ 説明が面倒だったり普段使わなかったり、実験的な設定項目をここに隠しています。
+各項目について Lights → Sampling Style (デフォルト：Arktoon） 間接光の取得条件を オリジナル(Arktoon)　および Cubed-Unity-Shader (Cubed)の2択から選択できます。
+Directional Shadow → Indirect face Intensity（デフォルト：0.25） 「陰色」の明るさを微調整します Shadow Strengthと似たような感じですが、「陰色」の強度ではなく、「陰色」そのものを決定します。 Vertex Colors → Color blend to [diffuse, emissive] (デフォルト：0） メッシュに頂点カラーがある場合、こちらのスライダーを上げることで、 Diffuse (≒Main Texture） / Emissive にその色を乗せることができます。
+PointLight 「平行光源ではないリアルタイムライト」から受ける光の陰影の強さ・境界などを設定します。　PointLight Shadows → Use Per-vertex Light（デフォルト：オン） 「頂点ライティング」モードのポイントライトから光を受けるかを設定します。 基本的にオンで良いですが、Cubed-Shaderなど他のシェーダーと光の当たり方を合わせる時や、鏡の奥で輪郭の点滅が気になる場合はオフにしてください。
+Shade from other meshes 「他のメッシュから受けた影」とみなすための計算材料です。 基本的に無視してください。
+MatCap / ShadeCap MatCapやShadeCapで使用している計算式を切り替えます。</description>
+    </item>
+    
   </channel>
 </rss>

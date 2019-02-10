@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.55.0-DEV" />
-    <meta name="description" content="困った？それとも別の用件？">
+    <meta name="description" content="">
 
 
     <link rel="shortcut icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
-    <title>お問い合わせ :: How to use Arktoon-Shaders</title>
+    <title>Outline :: How to use Arktoon-Shaders</title>
 
     
     <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/help/">
+  <body class="" data-url="/documents/outline/">
     <nav id="sidebar" class="">
 
 
@@ -125,7 +125,7 @@
   
     
     <li data-nav-id="/documents/" title="各カテゴリの機能について" class="dd-item 
-        
+        parent
         
         
         ">
@@ -225,7 +225,7 @@
  
   
     
-      <li data-nav-id="/documents/outline/" title="Outline" class="dd-item ">
+      <li data-nav-id="/documents/outline/" title="Outline" class="dd-item active">
         <a href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/outline/">
         Outline
         
@@ -388,8 +388,8 @@
   
     
     <li data-nav-id="/help/" title="お問い合わせ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://synqark.github.io/Arktoon-Shaders-Doc/help/">
@@ -448,7 +448,13 @@
             
           
           
-            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > お問い合わせ
+            
+            
+          
+          
+            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > <a href='https://synqark.github.io/Arktoon-Shaders-Doc/documents/'>各カテゴリの機能について</a> > Outline
+          
+        
           
         
           
@@ -465,9 +471,16 @@
 <ul>
 <li>
 <ul>
-<li><a href="#discordサーバーがあります">Discordサーバーがあります。</a></li>
-<li><a href="#twitterでも随時受け付けてます">Twitterでも随時受け付けてます</a></li>
-<li><a href="#直接コンタクトしたい">直接コンタクトしたい</a></li>
+<li><a href="#できること">できること</a></li>
+<li><a href="#各項目について">各項目について</a>
+<ul>
+<li><a href="#width">Width</a></li>
+<li><a href="#cutoff-mask-cutoff-range">Cutoff Mask / Cutoff Range</a></li>
+<li><a href="#use-width-mask-width-mask">Use Width Mask / Width Mask</a></li>
+<li><a href="#color">Color</a></li>
+<li><a href="#shadow-mix">Shadow mix</a></li>
+<li><a href="#base-color-mix">Base Color Mix</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -483,7 +496,7 @@
         
         <div id="body-inner">
           
-            <h1>お問い合わせ</h1>
+            <h1>Outline</h1>
           
 
         
@@ -491,25 +504,43 @@
 
 
 
-<p>困った？それとも別の用件？</p>
+<h3 id="できること">できること</h3>
 
-<h3 id="discordサーバーがあります">Discordサーバーがあります。</h3>
+<p>メッシュにアウトラインを設定できます。</p>
 
-<p><a href="https://discord.gg/ZeqMBut" target="_blank">相談用のDiscordサーバー</a>を建てました。こちらからご参加ください。</p>
+<h3 id="各項目について">各項目について</h3>
 
-<h3 id="twitterでも随時受け付けてます">Twitterでも随時受け付けてます</h3>
+<h4 id="width">Width</h4>
 
-<p><a href="https://www.twitter.com/synqark/" target="_blank">@synqark</a> 当てにリプライとかDMを飛ばしていただければ対応できるかも？</p>
+<p>アウトラインの幅を設定します。</p>
 
-<h3 id="直接コンタクトしたい">直接コンタクトしたい</h3>
+<h4 id="cutoff-mask-cutoff-range">Cutoff Mask / Cutoff Range</h4>
 
-<p>シェーダーでの表現方法に関する質問であれば、後から他の人が追えるようにできるだけオープンな場でお願いしたいです。<br />
-アバターへの同梱方法や、使用可否の確認など、表現以外の話であれば、TwitterのDMを使うか、 <code>virtually.synqarks@gmail.com</code> まで連絡下さい。</p>
+<p>アウトラインを「描画しない」箇所をマスクテクスチャで指定します。<br />
+Cutoff Rangeを操作して描画しない部分を調整できます。</p>
+
+<h4 id="use-width-mask-width-mask">Use Width Mask / Width Mask</h4>
+
+<p>アウトラインの「太さ」にマスクをかけることができます。白:100%～黒:0%<br />
+（太さの影響は、ポリゴン数に依存することに注意してください。）</p>
+
+<h4 id="color">Color</h4>
+
+<p>アウトラインの色を設定できます。</p>
+
+<h4 id="shadow-mix">Shadow mix</h4>
+
+<p>陰影をどの程度適用するかをスライダーで指定します。</p>
+
+<h4 id="base-color-mix">Base Color Mix</h4>
+
+<p>Main Colorで指定したをColorに合成します。</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -593,6 +624,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -605,6 +637,93 @@
             
             
                 
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -697,19 +816,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -733,74 +839,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -822,10 +860,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/samples/" title="シェーダー作例(WIP)"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/gloss/" title="Gloss"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/feature/" title="Arktoon-Shaders のとくちょう" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/matcap/" title="Matcap" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -856,3 +894,4 @@
 
   </body>
 </html>
+
