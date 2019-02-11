@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://synqark.github.io/Arktoon-Shaders-Doc/images/favicon.png" type="image/x-icon" />
-    <title>Reflection :: How to use Arktoon-Shaders</title>
+    <title>更新履歴 :: How to use Arktoon-Shaders</title>
 
     
     <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/documents/reflection/">
+  <body class="" data-url="/history/">
     <nav id="sidebar" class="">
 
 
@@ -125,7 +125,7 @@
   
     
     <li data-nav-id="/documents/" title="各カテゴリの機能について" class="dd-item 
-        parent
+        
         
         
         ">
@@ -263,7 +263,7 @@
  
   
     
-      <li data-nav-id="/documents/reflection/" title="Reflection" class="dd-item active">
+      <li data-nav-id="/documents/reflection/" title="Reflection" class="dd-item ">
         <a href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/reflection/">
         Reflection
         
@@ -366,8 +366,8 @@
   
     
     <li data-nav-id="/history/" title="更新履歴" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://synqark.github.io/Arktoon-Shaders-Doc/history/">
@@ -448,13 +448,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > <a href='https://synqark.github.io/Arktoon-Shaders-Doc/documents/'>各カテゴリの機能について</a> > Reflection
-          
-        
+            <a href='https://synqark.github.io/Arktoon-Shaders-Doc/'>Arktoon-Shaders. Docs</a> > 更新履歴
           
         
           
@@ -469,17 +463,12 @@
 <ul>
 <li>
 <ul>
+<li><a href="#v1-0-1-1-from-v1-0-0">v1.0.1.1 (from v1.0.0)</a>
+<ul>
 <li>
 <ul>
-<li><a href="#できること">できること</a></li>
-<li><a href="#各項目について">各項目について</a>
-<ul>
-<li><a href="#use-reflection-probe">Use Reflection Probe</a></li>
-<li><a href="#smoothness-mask">Smoothness &amp; Mask</a></li>
-<li><a href="#cubemap-fallback">Cubemap（Fallback）</a></li>
-<li><a href="#normal-map-mix">Normal Map mix</a></li>
-<li><a href="#shadow-mix">Shadow mix</a></li>
-<li><a href="#suppress-base-color">Suppress Base Color</a></li>
+<li><a href="#アップグレードの時にやってほしいこと">アップグレードの時にやってほしいこと</a></li>
+<li><a href="#変更点">変更点</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -496,7 +485,7 @@
         
         <div id="body-inner">
           
-            <h1>Reflection</h1>
+            <h1>更新履歴</h1>
           
 
         
@@ -504,48 +493,45 @@
 
 
 
-<h3 id="できること">できること</h3>
+<hr />
 
-<p>メッシュに対して鏡面反射を設定します。
-<figure>
-    <img src="https://synqark.github.io/Arktoon-Shaders-Doc/images/cat_reflection1.gif"/> 
-</figure>
-</p>
+<h2 id="v1-0-1-1-from-v1-0-0">v1.0.1.1 (from v1.0.0)</h2>
 
-<h3 id="各項目について">各項目について</h3>
+<h4 id="アップグレードの時にやってほしいこと">アップグレードの時にやってほしいこと</h4>
 
-<h4 id="use-reflection-probe">Use Reflection Probe</h4>
+<ul>
+<li>[Outline]→[Use Width Mask]にチェックを<strong>入れてなかった</strong>方<br />
+このプロパティは廃止され、常時オンになったため、<br />
+<strong>アップグレード後[Outline]→[Width &amp; Mask]にマスクテクスチャが指定されていれば、それを削除</strong>してください。</li>
+<li>[Shadow]→[Use Custom Shade]をオンにして独自の陰を指定していた方<br />
+<strong>アップグレード後 [Shadow] カテゴリの [Strength &amp; Mask] のスライダーを 1に</strong>してください。</li>
+</ul>
 
-<p>シーン中のReflection Probeを使用する場合はチェックします。
-チェック無し、またはチェックがあってもシーンに存在しない場合はCubemapが使用されます。</p>
+<h4 id="変更点">変更点</h4>
 
-<h4 id="smoothness-mask">Smoothness &amp; Mask</h4>
+<ul>
+<li><strong>レイアウトの修正を行いました。</strong><br />
+細かいところで並び替え、文言修正などが行われています。<br />
+<img src="https://user-images.githubusercontent.com/10284218/52543830-20f77500-2df0-11e9-9cd4-ee4ef9a0c6fb.png" alt="dyqspajuwaa_nqa" /></li>
 
-<p>面の「つやつや度」を設定します。高いほど光が集まり、強く反射します。
-Maskを指定することでメッシュの部分部分で設定が可能です。</p>
+<li><p><strong>ドキュメントのWebページ版を作成しました。</strong><br />
+<a href="https://synqark.github.io/Arktoon-Shaders-Doc/" target="_blank">https://synqark.github.io/Arktoon-Shaders-Doc/</a><br />
+Google Doc版は1.0.0.0を最終版とし、今後こちらをメンテナンスしていきます。
+<img src="https://user-images.githubusercontent.com/10284218/52543863-556b3100-2df0-11e9-91ea-722cc160f23d.png" alt="image" /></p></li>
 
-<h4 id="cubemap-fallback">Cubemap（Fallback）</h4>
+<li><p><strong>[Use Custom Shade]がオンの場合でも、[Shadow]→[Strength &amp; Mask]が使用できるようになりました。</strong><br />
+<strong>Custom Shadeの色を100%適用させたい場合、Strengthは常にMAXである必要があります</strong></p></li>
 
-<p>反射もととなるCubemapテクスチャを設定します。
-Use Reflection Probeがオンの場合は、シーンに存在しない場合に自動的に設定されます。</p>
+<li><p><strong>[Outline]→[Use Width Mask]を廃止しました。</strong><br />
+テクスチャが指定されていなければ、使わないと同義だったので。</p></li>
+</ul>
 
-<h4 id="normal-map-mix">Normal Map mix</h4>
-
-<p>Reflectionを着色する際にNormal mapをどの程度考慮するかをスライダーで指定します。</p>
-
-<h4 id="shadow-mix">Shadow mix</h4>
-
-<p>陰影部分にどの程度Reflectionを適用”しない”かをスライダーで指定します。</p>
-
-<h4 id="suppress-base-color">Suppress Base Color</h4>
-
-<p>Reflectionの着色に応じてメッシュ本来の色（≒ Main Color）をどの程度「抑える」かをスライダーで設定します。</p>
+<hr />
 
 
 <footer class=" footline" >
 	
 </footer>
-
 
         
         </div> 
@@ -629,7 +615,6 @@ Use Reflection Probeがオンの場合は、シーンに存在しない場合に
             
                 
                     
-                    
                 
                 
 
@@ -642,9 +627,6 @@ Use Reflection Probeがオンの場合は、シーンに存在しない場合に
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -742,7 +724,6 @@ Use Reflection Probeがオンの場合は、シーンに存在しない場合に
             
                 
                     
-                    
                 
                 
 
@@ -758,9 +739,6 @@ Use Reflection Probeがオンの場合は、シーンに存在しない場合に
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -829,6 +807,7 @@ Use Reflection Probeがオンの場合は、シーンに存在しない場合に
             
                 
                     
+                    
                 
                 
 
@@ -844,6 +823,9 @@ Use Reflection Probeがオンの場合は、シーンに存在しない場合に
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -865,10 +847,10 @@ Use Reflection Probeがオンの場合は、シーンに存在しない場合に
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/matcap/" title="Matcap"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/advanced/" title="Advanced"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/documents/rim/" title="Rim" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://synqark.github.io/Arktoon-Shaders-Doc/help/" title="お問い合わせ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -899,4 +881,3 @@ Use Reflection Probeがオンの場合は、シーンに存在しない場合に
 
   </body>
 </html>
-
