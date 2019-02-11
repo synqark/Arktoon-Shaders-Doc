@@ -27,6 +27,10 @@ weight: 6
 https://synqark.github.io/Arktoon-Shaders-Doc/  
 Google Doc版は1.0.0.0を最終版とし、今後こちらをメンテナンスしていきます。
 ![image](https://user-images.githubusercontent.com/10284218/52543863-556b3100-2df0-11e9-91ea-722cc160f23d.png)
+- **[Outline] カテゴリにカラーシフト機能を追加しました。**  
+Color と Base Color Mixの計算後に、HSVシフトが行えます。  
+![image](https://user-images.githubusercontent.com/10284218/52544768-45565000-2df6-11e9-86ba-6c559bc2057c.png)
+
 
 - **[Use Custom Shade]がオンの場合でも、[Shadow]→[Strength & Mask]が使用できるようになりました。**  
 **Custom Shadeの色を100%適用させたい場合、Strengthは常にMAXである必要があります**
