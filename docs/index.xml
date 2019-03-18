@@ -88,7 +88,7 @@ Color 反射する光の色に影響します。</description>
 マスクとして白黒テクスチャを設定でき、スライダーの値に乗算され、場所ごとの幅の太さを設定できます。
 Cutoff Mask / Cutoff Range アウトラインを「描画しない」箇所をマスクテクスチャで指定します。
 Cutoff Rangeを操作して描画しない部分を調整できます。
-Color アウトラインの色を設定できます。
+Color &amp;amp; Texture アウトラインの色をテクスチャ×カラーで設定できます。
 Base Color Mix CommonカテゴリのMain Colorの色を合成します。
 Use Color Shift ColorおよびBase Color Mixで決定された色に対して、HSVシフトを設定します。
 Shadow mix Shadowで設定した陰影をどの程度適用するかをスライダーで指定します。
