@@ -20,8 +20,8 @@ weight: 5
 #### Cutoff Mask / Cutoff Range
 アウトラインを「描画しない」箇所をマスクテクスチャで指定します。  
 Cutoff Rangeを操作して描画しない部分を調整できます。
-#### Color
-アウトラインの色を設定できます。
+#### Color & Texture
+アウトラインの色をテクスチャ×カラーで設定できます。
 #### Base Color Mix
 CommonカテゴリのMain Colorの色を合成します。
 #### Use Color Shift
