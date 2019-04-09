@@ -44,6 +44,7 @@ Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equ
 {{< figure src="/images/variant_stencilReaderFadeFade.jpg" >}}
 ### arktoon/_Extra/EmissiveFreak
 下記機能が設定できる、アニメーション付きの発光テクスチャを2枚使用できる、特殊バリエーションです。  
+
 - 色&テクスチャを指定可能
 - マスクを指定可能（後述のスクロール・深度等のエフェクトの影響を受けない。）
 - 色&テクスチャをスクロール
