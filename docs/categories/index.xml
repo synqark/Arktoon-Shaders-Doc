@@ -6,7 +6,7 @@
     <description>Recent content on How to use Arktoon-Shaders</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 10 Feb 2019 21:10:57 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 Feb 2019 11:33:07 +0900</lastBuildDate>
     
 	<atom:link href="https://synqark.github.io/Arktoon-Shaders-Doc/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,7 +26,7 @@ Emission マテリアルが発光している色をテクスチャ×カラーで
 Is Double Sided 裏面を描画するかどうかを設定します。 （Cull Offではなく、裏面分の面を追加で生成しています）
 Flip backface normal 裏面の法線を反転します。
 両面に設定したいメッシュが鉄などといった光を通さないものの場合に、適切な受光を設定します。　Backface Light intensity 裏面の受光量を乗算で指定します。
-スカートの裏側など、必然的に暗い部分に関して倍率を下げることで自然な表現ができます。   ZWrite （arktoon/Fade を指定時に表示） 透明に関する設定です。基本的にはONで触る必要がありませんが、
+スカートの裏側など、必然的に暗い部分に関して倍率を下げることで自然な表現ができます。   Use backface color shift 裏面の色をベースカラーから変更したいときに指定します。   ZWrite （arktoon/Fade を指定時に表示） 透明に関する設定です。基本的にはONで触る必要がありませんが、
 負荷を考慮したい場合や、ONが意図した透過表現でない場合に変更してみてください。</description>
     </item>
     
@@ -45,14 +45,14 @@ Emission マテリアルが発光している色をテクスチャ×カラーで
 Is Double Sided 裏面を描画するかどうかを設定します。 （Cull Offではなく、裏面分の面を追加で生成しています）
 Flip backface normal 裏面の法線を反転します。
 両面に設定したいメッシュが鉄などといった光を通さないものの場合に、適切な受光を設定します。　Backface Light intensity 裏面の受光量を乗算で指定します。
-スカートの裏側など、必然的に暗い部分に関して倍率を下げることで自然な表現ができます。   ZWrite （arktoon/Fade を指定時に表示） 透明に関する設定です。基本的にはONで触る必要がありませんが、
+スカートの裏側など、必然的に暗い部分に関して倍率を下げることで自然な表現ができます。   Use backface color shift 裏面の色をベースカラーから変更したいときに指定します。   ZWrite （arktoon/Fade を指定時に表示） 透明に関する設定です。基本的にはONで触る必要がありませんが、
 負荷を考慮したい場合や、ONが意図した透過表現でない場合に変更してみてください。</description>
     </item>
     
     <item>
       <title>Arktoon-Shaders のとくちょう</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/feature/</link>
-      <pubDate>Sun, 10 Feb 2019 14:27:13 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/feature/</guid>
       <description>ForwardRenderingの全てのライトをサポート （VRChatの鏡含む） Forward Lightingにおける下記のライト要素をサポートします
@@ -87,7 +87,7 @@ Flip backface normal 裏面の法線を反転します。
     <item>
       <title>Arktoon-Shaders のとくちょう</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/feature/</link>
-      <pubDate>Sun, 10 Feb 2019 14:27:13 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/feature/</guid>
       <description>ForwardRenderingの全てのライトをサポート （VRChatの鏡含む） Forward Lightingにおける下記のライト要素をサポートします
@@ -148,7 +148,7 @@ AlphaCutout (arktoon/AlphaCutout を指定時に出現） できること カッ
     <item>
       <title>とりあえず使う</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/start/</link>
-      <pubDate>Sun, 10 Feb 2019 17:16:50 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/start/</guid>
       <description>ダウンロード＆インポート 下記の２つのサイトからダウンロードが可能です、
@@ -163,7 +163,7 @@ AlphaCutout (arktoon/AlphaCutout を指定時に出現） できること カッ
     <item>
       <title>とりあえず使う</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/start/</link>
-      <pubDate>Sun, 10 Feb 2019 17:16:50 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/start/</guid>
       <description>ダウンロード＆インポート 下記の２つのサイトからダウンロードが可能です、
@@ -224,7 +224,7 @@ Use Shade Texture → Shade Texture 陰にあたる部分をテクスチャを�
     <item>
       <title>シェーダーのバリエーション</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/varieties/</link>
-      <pubDate>Sun, 10 Feb 2019 17:18:04 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/varieties/</guid>
       <description> arktoon/Opaque 不透明なマテリアルの場合、こちらを設定してください。
@@ -240,13 +240,15 @@ Main Textureの透明度でカットアウト（切り抜き）が行われま�
 および読み込んで比較して表示制御（Reader）を実施します。
 それ以外の機能はCutoutと同等です。
   arktoon/Stencil/Reader/Fade 上記「arktoon/Stencil/Reader/Cutout」のFadeバリエーションになっています。
-arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。   arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。   </description>
+arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。   arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。   arktoon/_Extra/EmissiveFreak 下記機能が設定できる、アニメーション付きの発光テクスチャを2枚使用できる、特殊バリエーションです。
+- 色&amp;amp;テクスチャを指定可能 - マスクを指定可能（後述のスクロール・深度等のエフェクトの影響を受けない。） - 色&amp;amp;テクスチャをスクロール - 色&amp;amp;テクスチャに奥行きをつける(Parallaxed Emissionと同じ効果) - いくつかの発光エフェクトと、それぞれの適用度を設定可能（ブリージング・ブリンク） - カラーシフトアニメーションを設定可能(Hue Shift)
+  </description>
     </item>
     
     <item>
       <title>シェーダーのバリエーション</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/varieties/</link>
-      <pubDate>Sun, 10 Feb 2019 17:18:04 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/varieties/</guid>
       <description> arktoon/Opaque 不透明なマテリアルの場合、こちらを設定してください。
@@ -262,7 +264,9 @@ Main Textureの透明度でカットアウト（切り抜き）が行われま�
 および読み込んで比較して表示制御（Reader）を実施します。
 それ以外の機能はCutoutと同等です。
   arktoon/Stencil/Reader/Fade 上記「arktoon/Stencil/Reader/Cutout」のFadeバリエーションになっています。
-arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。   arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。   </description>
+arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。   arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。   arktoon/_Extra/EmissiveFreak 下記機能が設定できる、アニメーション付きの発光テクスチャを2枚使用できる、特殊バリエーションです。
+- 色&amp;amp;テクスチャを指定可能 - マスクを指定可能（後述のスクロール・深度等のエフェクトの影響を受けない。） - 色&amp;amp;テクスチャをスクロール - 色&amp;amp;テクスチャに奥行きをつける(Parallaxed Emissionと同じ効果) - いくつかの発光エフェクトと、それぞれの適用度を設定可能（ブリージング・ブリンク） - カラーシフトアニメーションを設定可能(Hue Shift)
+  </description>
     </item>
     
     <item>
@@ -292,7 +296,7 @@ Color 反射する光の色に影響します。</description>
     <item>
       <title>各カテゴリの機能について</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/</link>
-      <pubDate>Sun, 10 Feb 2019 17:18:45 +0900</pubDate>
+      <pubDate>Sun, 10 Feb 2019 21:30:57 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/</guid>
       <description> 実際にシェーダーの各カテゴリについて解説します。
@@ -306,7 +310,7 @@ Color 反射する光の色に影響します。</description>
     <item>
       <title>各カテゴリの機能について</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/documents/</link>
-      <pubDate>Sun, 10 Feb 2019 17:18:45 +0900</pubDate>
+      <pubDate>Sun, 10 Feb 2019 21:30:57 +0900</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/documents/</guid>
       <description> 実際にシェーダーの各カテゴリについて解説します。
@@ -354,10 +358,12 @@ Shadow mix Shadowで設定した陰影をどの程度適用するかをスライ
     <item>
       <title>更新履歴</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/history/</link>
-      <pubDate>Mon, 11 Feb 2019 11:33:07 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/history/</guid>
-      <description>v1.0.2.2 (from v1.0.1.1) 変更点  アウトラインカテゴリのカラーにテクスチャを指定できるようになりました UnityをProスキンで実行中に、一部テキストが非常に見づらくなる問題を修正しました 今後のバージョンアップ時の作業がやりやすくなりました。 今後は、導入済みのプロジェクトに新しいArktoon-Shadersをインポートした時点で、マテリアルのアップグレード処理が行われ、手動の変更作業がなくなる予定です。
+      <description>v1.0.2.4 (from v1.0.2.2) 変更点  [Common]カテゴリの[Is Double Sided]オプション以下に、裏面のカラーを色相指定できる[Backface color shift]を追加しました
+   特殊バリエーション[EmissiveFreak]を追加しました。
+機能はこちらより確認できます。     v1.0.2.2 (from v1.0.1.1) 変更点  アウトラインカテゴリのカラーにテクスチャを指定できるようになりました UnityをProスキンで実行中に、一部テキストが非常に見づらくなる問題を修正しました 今後のバージョンアップ時の作業がやりやすくなりました。 今後は、導入済みのプロジェクトに新しいArktoon-Shadersをインポートした時点で、マテリアルのアップグレード処理が行われ、手動の変更作業がなくなる予定です。
  （1.0.1.0以降のバージョンで作られたアバターに導入する方法） 無邪気にアバターと最新版のArktoon-Shaderをインポートして完了になります。
  （0.9.5.3～1.0.0.0のバージョンのシェーダーで作られたアバターを導入する方へ） ①最初にそのアバターが想定しているArktoon-Shadersのバージョンをインポートしてください。 過去のバージョンはhttps://github.com/synqark/Arktoon-Shaders/releases からダウンロードできます ②その後、最新版のArktoon-Shadersをインポートしてください 今まで手動で作業が必要だった部分のアップグレードが自動で実施されます。
  （0.9.5.3より前のバージョンのアバターに最新版のArktoon-Shadersを導入する方法） 最新版のArktoon-Shadersを導入後、https://github.com/synqark/Arktoon-Shaders/releases に記載されている0.9.5.3までの インポート時の注意 の作業をお願いします（ごめんなさい）
@@ -368,21 +374,18 @@ Shadow mix Shadowで設定した陰影をどの程度適用するかをスライ
   内部的な話  テキストシリアライズ方式に変更しました シェーダーのコンパイルに関する大幅な仕様変更をしました。動きに影響はありません。
 v1.0.1.1 (from v1.0.0) アップグレードの時にやってほしいこと [Outline]→[Use Width Mask]にチェックを入れてなかった方
 このプロパティは廃止され、常時オンになったため、
-アップグレード後[Outline]→[Width &amp;amp; Mask]にマスクテクスチャが指定されていれば、それを削除してください。
- [Shadow]→[Use Custom Shade]をオンにして独自の陰を指定していた方
-アップグレード後 [Shadow] カテゴリの [Strength &amp;amp; Mask] のスライダーを 1にしてください。
-  変更点  レイアウトの修正を行いました。
-細かいところで並び替え、文言修正などが行われています。
- ドキュメントのWebページ版を作成しました。</description>
+アップグレード後[Outline]→[Width &amp;amp; Mask]にマスクテクスチャが指定されていれば、それを削除してください。</description>
     </item>
     
     <item>
       <title>更新履歴</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/history/</link>
-      <pubDate>Mon, 11 Feb 2019 11:33:07 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/history/</guid>
-      <description>v1.0.2.2 (from v1.0.1.1) 変更点  アウトラインカテゴリのカラーにテクスチャを指定できるようになりました UnityをProスキンで実行中に、一部テキストが非常に見づらくなる問題を修正しました 今後のバージョンアップ時の作業がやりやすくなりました。 今後は、導入済みのプロジェクトに新しいArktoon-Shadersをインポートした時点で、マテリアルのアップグレード処理が行われ、手動の変更作業がなくなる予定です。
+      <description>v1.0.2.4 (from v1.0.2.2) 変更点  [Common]カテゴリの[Is Double Sided]オプション以下に、裏面のカラーを色相指定できる[Backface color shift]を追加しました
+   特殊バリエーション[EmissiveFreak]を追加しました。
+機能はこちらより確認できます。     v1.0.2.2 (from v1.0.1.1) 変更点  アウトラインカテゴリのカラーにテクスチャを指定できるようになりました UnityをProスキンで実行中に、一部テキストが非常に見づらくなる問題を修正しました 今後のバージョンアップ時の作業がやりやすくなりました。 今後は、導入済みのプロジェクトに新しいArktoon-Shadersをインポートした時点で、マテリアルのアップグレード処理が行われ、手動の変更作業がなくなる予定です。
  （1.0.1.0以降のバージョンで作られたアバターに導入する方法） 無邪気にアバターと最新版のArktoon-Shaderをインポートして完了になります。
  （0.9.5.3～1.0.0.0のバージョンのシェーダーで作られたアバターを導入する方へ） ①最初にそのアバターが想定しているArktoon-Shadersのバージョンをインポートしてください。 過去のバージョンはhttps://github.com/synqark/Arktoon-Shaders/releases からダウンロードできます ②その後、最新版のArktoon-Shadersをインポートしてください 今まで手動で作業が必要だった部分のアップグレードが自動で実施されます。
  （0.9.5.3より前のバージョンのアバターに最新版のArktoon-Shadersを導入する方法） 最新版のArktoon-Shadersを導入後、https://github.com/synqark/Arktoon-Shaders/releases に記載されている0.9.5.3までの インポート時の注意 の作業をお願いします（ごめんなさい）
@@ -393,12 +396,7 @@ v1.0.1.1 (from v1.0.0) アップグレードの時にやってほしいこと [O
   内部的な話  テキストシリアライズ方式に変更しました シェーダーのコンパイルに関する大幅な仕様変更をしました。動きに影響はありません。
 v1.0.1.1 (from v1.0.0) アップグレードの時にやってほしいこと [Outline]→[Use Width Mask]にチェックを入れてなかった方
 このプロパティは廃止され、常時オンになったため、
-アップグレード後[Outline]→[Width &amp;amp; Mask]にマスクテクスチャが指定されていれば、それを削除してください。
- [Shadow]→[Use Custom Shade]をオンにして独自の陰を指定していた方
-アップグレード後 [Shadow] カテゴリの [Strength &amp;amp; Mask] のスライダーを 1にしてください。
-  変更点  レイアウトの修正を行いました。
-細かいところで並び替え、文言修正などが行われています。
- ドキュメントのWebページ版を作成しました。</description>
+アップグレード後[Outline]→[Width &amp;amp; Mask]にマスクテクスチャが指定されていれば、それを削除してください。</description>
     </item>
     
     <item>
@@ -464,7 +462,7 @@ Suppress Base Color Reflectionの着色に応じてメッシュ本来の色（�
     <item>
       <title>お問い合わせ</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/help/</link>
-      <pubDate>Sun, 10 Feb 2019 17:25:47 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/help/</guid>
       <description>困った？それとも別の用件？
@@ -478,7 +476,7 @@ TwitterのDMを使うか、 virtually.synqarks@gmail.com まで連絡下さい�
     <item>
       <title>お問い合わせ</title>
       <link>https://synqark.github.io/Arktoon-Shaders-Doc/help/</link>
-      <pubDate>Sun, 10 Feb 2019 17:25:47 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synqark.github.io/Arktoon-Shaders-Doc/help/</guid>
       <description>困った？それとも別の用件？
