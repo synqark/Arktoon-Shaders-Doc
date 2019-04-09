@@ -16,7 +16,7 @@ weight: 6
 - [Common]カテゴリの[Is Double Sided]オプション以下に、裏面のカラーを色相指定できる[Backface color shift]を追加しました  
   {{< figure src="/images/cat_common3.gif" >}}
 - 特殊バリエーション[EmissiveFreak]を追加しました。  
-  機能は[こちら](../varieties)より確認できます。
+  機能は[こちら](https://synqark.github.io/Arktoon-Shaders-Doc/varieties/#arktoon-extra-emissivefreak)より確認できます。
   {{< figure src="/images/variant_EmissiveFreak.gif" >}}
 
 ***
