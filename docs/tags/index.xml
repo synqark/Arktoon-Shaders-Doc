@@ -241,8 +241,7 @@ Main Textureの透明度でカットアウト（切り抜き）が行われま�
 それ以外の機能はCutoutと同等です。
   arktoon/Stencil/Reader/Fade 上記「arktoon/Stencil/Reader/Cutout」のFadeバリエーションになっています。
 arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。   arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。   arktoon/_Extra/EmissiveFreak 下記機能が設定できる、アニメーション付きの発光テクスチャを2枚使用できる、特殊バリエーションです。
-- 色&amp;amp;テクスチャを指定可能 - マスクを指定可能（後述のスクロール・深度等のエフェクトの影響を受けない。） - 色&amp;amp;テクスチャをスクロール - 色&amp;amp;テクスチャに奥行きをつける(Parallaxed Emissionと同じ効果) - いくつかの発光エフェクトと、それぞれの適用度を設定可能（ブリージング・ブリンク） - カラーシフトアニメーションを設定可能(Hue Shift)
-  </description>
+ 色&amp;amp;テクスチャを指定可能 マスクを指定可能（後述のスクロール・深度等のエフェクトの影響を受けない。） 色&amp;amp;テクスチャをスクロール 色&amp;amp;テクスチャに奥行きをつける(Parallaxed Emissionと同じ効果) いくつかの発光エフェクトと、それぞれの適用度を設定可能（ブリージング・ブリンク） カラーシフトアニメーションを設定可能(Hue Shift)    </description>
     </item>
     
     <item>
@@ -265,8 +264,7 @@ Main Textureの透明度でカットアウト（切り抜き）が行われま�
 それ以外の機能はCutoutと同等です。
   arktoon/Stencil/Reader/Fade 上記「arktoon/Stencil/Reader/Cutout」のFadeバリエーションになっています。
 arktoon/Stencil/WriterMask/Cutout 上記「arktoon/Stencil/Writer/Cutout」に、ステンシルバッファ専用のマスクテクスチャを追加したバリエーションになります。   arktoon/Stencil/Reader/Double/FadeFade ステンシル別で2回Fadeを描画します。それぞれPrimaryとSecondaryに分かれます。 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。   arktoon/_Extra/EmissiveFreak 下記機能が設定できる、アニメーション付きの発光テクスチャを2枚使用できる、特殊バリエーションです。
-- 色&amp;amp;テクスチャを指定可能 - マスクを指定可能（後述のスクロール・深度等のエフェクトの影響を受けない。） - 色&amp;amp;テクスチャをスクロール - 色&amp;amp;テクスチャに奥行きをつける(Parallaxed Emissionと同じ効果) - いくつかの発光エフェクトと、それぞれの適用度を設定可能（ブリージング・ブリンク） - カラーシフトアニメーションを設定可能(Hue Shift)
-  </description>
+ 色&amp;amp;テクスチャを指定可能 マスクを指定可能（後述のスクロール・深度等のエフェクトの影響を受けない。） 色&amp;amp;テクスチャをスクロール 色&amp;amp;テクスチャに奥行きをつける(Parallaxed Emissionと同じ効果) いくつかの発光エフェクトと、それぞれの適用度を設定可能（ブリージング・ブリンク） カラーシフトアニメーションを設定可能(Hue Shift)    </description>
     </item>
     
     <item>
