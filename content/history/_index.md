@@ -11,6 +11,15 @@ weight: 6
 ---
 
 ***
+## v1.0.2.4 (from v1.0.2.2)
+#### 変更点
+- [Common]カテゴリの[Is Double Sided]オプション以下に、裏面のカラーを色相指定できる[Backface color shift]を追加しました  
+  {{< figure src="/images/cat_common3.gif" >}}
+- 特殊バリエーション[EmissiveFreak]を追加しました。  
+  機能は[こちら](../varieties)より確認できます。
+  {{< figure src="/images/variant_EmissiveFreak.gif" >}}
+
+***
 ## v1.0.2.2 (from v1.0.1.1)
 #### 変更点
 - アウトラインカテゴリのカラーにテクスチャを指定できるようになりました

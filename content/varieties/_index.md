@@ -42,3 +42,14 @@ Main Textureの透明度でカットアウト（切り抜き）が行われま�
 「Main Texture」「Color」「Normal Map」「Emission」の４つはそれぞれ別で定義できます。
 Primaryに「NotEqual」を指定し、SecondaryのColorを半透明にし「Equal」を指定することで、ステンシルの対象となった部分を半透明に透けさせることができます。
 {{< figure src="/images/variant_stencilReaderFadeFade.jpg" >}}
+### arktoon/_Extra/EmissiveFreak
+下記機能が設定できる、アニメーション付きの発光テクスチャを2枚使用できる、特殊バリエーションです。  
+- 色&テクスチャを指定可能
+- マスクを指定可能（後述のスクロール・深度等のエフェクトの影響を受けない。）
+- 色&テクスチャをスクロール
+- 色&テクスチャに奥行きをつける(Parallaxed Emissionと同じ効果)
+- いくつかの発光エフェクトと、それぞれの適用度を設定可能（ブリージング・ブリンク）
+- カラーシフトアニメーションを設定可能(Hue Shift)
+
+{{< figure src="/images/variant_EmissiveFreak.gif" >}}
+  

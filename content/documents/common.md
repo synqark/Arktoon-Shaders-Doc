@@ -33,6 +33,9 @@ weight: 1
 裏面の受光量を乗算で指定します。  
 スカートの裏側など、必然的に暗い部分に関して倍率を下げることで自然な表現ができます。
 {{< figure src="/images/cat_common2.gif" >}}
+##### Use backface color shift
+裏面の色をベースカラーから変更したいときに指定します。
+{{< figure src="/images/cat_common3.gif" >}}
 #### ZWrite （arktoon/Fade を指定時に表示）
 透明に関する設定です。基本的にはONで触る必要がありませんが、  
 負荷を考慮したい場合や、ONが意図した透過表現でない場合に変更してみてください。
