@@ -5,7 +5,6 @@ draft: false
 ---
 ## Arktoon-Shaders. のつかいかた  
 当サイトは、公開中の Arktoon-Shaders ([GitHub](https://github.com/synqark/Arktoon-Shaders))([BOOTH](https://packetbird.booth.pm/items/1027997)) のマニュアルになります。
-{{< tweet 1093536161828487168 >}}
 
 ## 旧ドキュメント(v1.0.0.0以前)    
 1.0.0.0以前はこちらになります。
