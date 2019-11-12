@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>お問い合わせ on How to use Arktoon-Shaders</title>
@@ -6,6 +6,7 @@
     <description>Recent content in お問い合わせ on How to use Arktoon-Shaders</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
+    <lastBuildDate>Sun, 10 Feb 2019 17:25:47 +0900</lastBuildDate>
     
 	<atom:link href="https://synqark.github.io/Arktoon-Shaders-Doc/help/index.xml" rel="self" type="application/rss+xml" />
     
